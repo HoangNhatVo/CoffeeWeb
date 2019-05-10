@@ -1,0 +1,29 @@
+ul li{
+	list-style-type: none;
+}
+.row .main-menu li{
+	border:1px solid #ccc;
+	border-bottom: none;
+	width: 200px;
+}
+.row .main-menu li:last-child{
+	border-bottom: 1px solid #ccc;
+}
+.row .main-menu li.active,
+.row .main-menu li:hover{
+	background-color: #881a1a;
+}
+.row .main-menu li a{
+	display: block;
+	padding:7px;
+}
+.row .main-menu li a:hover{
+	color: #fff;
+}
+.single-item-title{
+	font-weight: 700;
+	font-size: 16px;
+}
+.single-item-price{
+	margin-bottom: 10px;
+}

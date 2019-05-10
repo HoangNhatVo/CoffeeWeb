@@ -1,0 +1,9 @@
+.history-navigation{
+	text-align: center;
+}
+.history-navigation:before{
+	width: 24%;
+}
+.history-navigation a span{
+	line-height: 1.285;
+}

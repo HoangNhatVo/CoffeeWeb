@@ -1,0 +1,33 @@
+.tp-bannertimer{
+	display: none;
+}
+.add-to-cart{
+	background-color: #881a1a;
+}
+.sologan{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+ 	transform: translate(14%,-60%);
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 10px;
+	pointer-events: none;
+	z-index: 100;
+	line-height: 1.285;
+	font-family: 'K2D', sans-serif;
+}
+.sologan h1{
+	text-decoration: overline;
+	margin-bottom: 20px;
+	color: #fff;
+	font-family: 'K2D', sans-serif;
+	font-size: 45px;
+}
+.sologan p{
+	font-size: 20px;
+}
+.single-item-caption{
+	margin-bottom: 15px;
+}

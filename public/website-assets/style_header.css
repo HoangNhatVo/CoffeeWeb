@@ -1,0 +1,83 @@
+.header-top{
+	border:none;
+}
+#logo img{
+	margin-bottom: 0;
+}
+.pull-left a{
+	font-family: 'Orbitron', sans-serif;
+	font-size: 20px;
+    color: #881a1a !important;
+}
+.menu-beta {
+	border-bottom: 1px solid #ccc;
+}
+.menu-beta li,
+.menu-beta li:first-child {
+	border:none;
+	transition: all 0.5s ease;
+}
+.menu-beta li:hover,
+.menu-beta li:first-child:hover{
+	background-color: #881a1a;
+}
+.menu-beta li>a{
+	font-size: 15px;
+	font-weight: 700;
+}
+.menu-beta li>a:hover{
+	color: #fff;
+}
+.main-menu ul.l-inline> li> a{
+	font-weight: 700;
+	font-size: 17px;
+}
+.main-menu ul li.active> a{
+	background-color: #881a1a;
+}
+.main-menu ul.l-inline> li> a:hover{
+	background-color: #3e0606;
+}
+.beta-comp{
+	background-color: #fff;
+
+}
+.cart .beta-select{
+	font-weight: 500;
+}
+.cart .beta-select i:first-child,
+.cart .beta-select i:last-child,
+#searchsubmit {
+	color: #881a1a;
+}
+.sub-menu{
+	border-radius: 5px;
+	z-index: 1000;
+}
+.sub-menu li:hover, .children li:hover,
+.sub-menu li.parent-active, .children li.parent-active,
+.parent-active>a {
+	background-color: #881a1a;
+}
+.sub-menu li a, .children li a {
+	font-weight: 700;
+}
+#searchform #s{
+	height: 37px;
+}
+.cart-body{
+	border-radius: 5px;
+}
+.cart-body a i{
+	padding-left: 3px;
+}
+.cart-body .text-right{
+	text-align: left;
+}
+.beta-btn.primary:hover
+{
+	background-color: #881a1a;
+}
+.beta-btn{
+	border:1px solid #881a1a;
+}
