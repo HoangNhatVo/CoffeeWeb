@@ -41,7 +41,7 @@ class PageController extends Controller
         $sp_tuongtu = Product::where('id_type', $sanpham->id_type)->inRandomOrder()->paginate(3);
         $loai_sp = ProductType::where('id', $sanpham->id_type)->first();
         $sp_km = Product::where('promotion_price', '<>', 0)->inRandomOrder()->paginate(4);
-        $sp_moi = Product::where('new', 1)->inRandomOrder()->paginate(4);
+        $sp_moi = Product::where('new', 'mới')->inRandomOrder()->paginate(4);
         return view('page.chitiet_sanpham', compact('sanpham', 'sp_tuongtu', 'loai_sp', 'sp_km', 'sp_moi'));
     }
 

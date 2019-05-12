@@ -4,7 +4,7 @@
     <div class="inner-header">
         <div class="container">
             <div class="pull-left">
-                <h6 class="inner-title">{{$sanpham->name}}</h6>
+                <h6 class="inner-title">Sản Phẩm: {{$sanpham->name}}</h6>
             </div>
             <div class="pull-right">
                 <div class="beta-breadcrumb font-large">
@@ -51,7 +51,7 @@
                             <p>Số lượng:</p>
                             <div class="single-item-options">
 
-                                <input style="width: 50px;height: 35px" type="number" class="quality" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric">
+                                <input style="width: 50px;height: 35px;font-size: 17px;font-weight: 500;" type="number" class="quality" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric">
                                 <a class="add-to-cart" href="{{route('themgiohang',$sanpham->id)}}"><i
                                             class="fa fa-shopping-cart"></i></a>
                                 <div class="clearfix"></div>
@@ -62,7 +62,7 @@
                     <div class="space40">&nbsp;</div>
                     <div class="woocommerce-tabs">
                         <ul class="tabs">
-                            <li><a href="#tab-description">Mô tả</a></li>
+                            <li><a href="#tab-description"><p style="font-size: 16px;color: #881a1a;font-weight: 700;">Mô tả</p></a></li>
                         </ul>
 
                         <div class="panel" id="tab-description">
@@ -76,7 +76,7 @@
                     </div>
                     <div class="space50">&nbsp;</div>
                     <div class="beta-products-list">
-                        <h4>Sản phẩm tương tự</h4>
+                        <h4 style="margin-bottom: 15px;">Sản phẩm tương tự</h4>
 
                         <div class="row">
                             @foreach($sp_tuongtu as $sptt)
