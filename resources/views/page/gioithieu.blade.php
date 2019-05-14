@@ -40,7 +40,7 @@
                <h5 class="other-title">Birth.</h5>
               <p>
                 2/2/1998,<br/>
-                227 Nguyễn Văn Cừ,P4,Q5<br/>
+                227 Nguyễn Văn Cừ, P4, Q5<br/>
                 Tp.Hồ Chí Minh
                </p>
                <div class="space20">&nbsp;</div>
@@ -63,8 +63,8 @@
               <div class="col-sm-7">
                <h5 class="other-title">Birth.</h5>
                <p>
-                2/2/1998,<br/>
-                227 Nguyễn Văn Cừ,P4,Q5<br/>
+                08/01/1998,<br/>
+                227 Nguyễn Văn Cừ, P4, Q5<br/>
                 Tp.Hồ Chí Minh
                </p>
                <div class="space20">&nbsp;</div>
@@ -84,7 +84,7 @@
          </div>
          <div class="space95">&nbsp;</div>
          
-         <h2 class="text-center wow fadeInDown">Our Passion for What We Do Transfers Into Our Services</h2>
+         <!-- <h2 class="text-center wow fadeInDown">Our Passion for What We Do Transfers Into Our Services</h2>
          <div class="space20">&nbsp;</div>
          <p class="text-center wow fadeInLeft">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
           nisi ut aliquip ex ea commodo consequat.<br/> Duis aute irure dolor in reprehenderit in voluptate velit
@@ -122,7 +122,7 @@
             <p class="beta-counter-value timer numbers" data-to="150" data-speed="2000">150</p>
             <p class="beta-counter-title">New Projects</p>
            </div>
-          </div>
+          </div> -->
          </div> <!-- .beta-counter block end -->
 
          
