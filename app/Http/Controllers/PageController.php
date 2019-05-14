@@ -21,8 +21,8 @@ class PageController extends Controller
     public function getIndex()
     {
         $slide = Slide::all();
-        $sp_moi = Product::where('new', "mới")->inRandomOrder()->paginate(8);
-        $sp_km = Product::where('promotion_price', '<>', 0)->inRandomOrder()->paginate(8);
+        $sp_moi = Product::where('new', "mới")->inRandomOrder()->paginate(4);
+        $sp_km = Product::where('promotion_price', '<>', 0)->inRandomOrder()->paginate(4);
         return view('page.trangchu', compact('slide', 'sp_moi', 'sp_km'));
     }
 

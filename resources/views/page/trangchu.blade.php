@@ -90,6 +90,7 @@ Chỉ cần cafe ngon</p>
                                     </div>
                                     @endforeach
                                 </div>
+                                <div class="row">{{$sp_moi->links()}}</div>
                             </div> <!-- .beta-products-list -->
 
                             <div class="space50">&nbsp;</div>
@@ -104,6 +105,11 @@ Chỉ cần cafe ngon</p>
                                     @foreach($sp_km as $spkm)
                                     <div class="col-sm-3">
                                         <div class="single-item">
+                                            @if($spm->promotion_price!=0)
+                                            <div class="ribbon-wrapper">
+                                            <div class="ribbon sale">Sale</div>
+                                            </div>
+                                            @endif
                                             <div class="single-item-header">
                                                 <a href="{{route('chitietsanpham',$spkm->id)}}"><img
                                                     src="upload/product/{{$spkm->image}}" alt=""
@@ -131,6 +137,7 @@ Chỉ cần cafe ngon</p>
                                             </div>
                                             @endforeach
                                         </div>
+                                        <div class="row">{{$sp_moi->links()}}</div>
                                     </div> <!-- .beta-products-list -->
                                 </div>
                             </div> <!-- end section with sidebar and main content -->
