@@ -90,7 +90,7 @@
                                         <div class="single-item-header">
                                             <a href={{route('chitietsanpham',$sptt->id)}}><img
                                                         src="upload/product/{{$sptt->image}}"
-                                                        alt="" height="150px"></a>
+                                                        alt="" height="250px"></a>
                                         </div>
                                         <div class="single-item-body">
                                             <p class="single-item-title">{{$sptt->name}}</p>
