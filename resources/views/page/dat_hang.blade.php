@@ -30,12 +30,12 @@
                         {{Session::get('thongbao')}}
                     </div>
                     @endif
-                    <h4>Đặt hàng</h4>
+                    <h4>Thông tin khách hàng</h4>
                     <div class="space20">&nbsp;</div>
                         @if(Auth::check())
                     <div class="form-block">
                         <label for="name">Họ tên*</label>
-                        <input type="text" name="name" placeholder="Họ tên" value="{{Auth::user()->full_name}}" required>
+                        <input type="text" name="name" placeholder="Họ tên" value="{{Auth::user()->full_name}}" required autofocus="true">
                     </div>
 
                     <div class="form-block">
@@ -63,7 +63,7 @@
                             @else
                             <div class="form-block">
                                 <label for="name">Họ tên*</label>
-                                <input type="text" name="name" placeholder="Họ tên" required>
+                                <input type="text" name="name" placeholder="Họ tên" required autofocus="true">
                             </div>
                             <div class="form-block">
                                 <label>Giới tính </label>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="your-order">
-                        <div class="your-order-head"><h5>Đơn hàng của bạn</h5></div>
+                        <div class="your-order-head"><h5 style="text-align: center;">Đơn hàng của bạn</h5></div>
                         <div class="your-order-body" style="padding: 0px 10px">
                             <div class="your-order-item">
                                 <div>
@@ -108,8 +108,10 @@
                                         class="pull-left">
                                         <div class="media-body">
                                             <p class="font-large">{{$cart['item']['name']}}</p>
+                                            <div class="space10">&nbsp;</div>
                                             <span class="color-gray your-order-info">Đơn giá: {{number_format($cart['price'])}}
                                             đồng</span>
+                                            <div class="space10">&nbsp;</div>
                                             <span class="color-gray your-order-info">Số lượng: {{$cart['qty']}}</span>
                                         </div>
                                     </div>
@@ -130,8 +132,8 @@
 
 
                         <div class="text-center">
-                            <button type="submit" class="beta-btn primary" href="#" style="background-color: #881a1a;border-radius: 2px">Đặt hàng <i
-                                class="fa fa-chevron-right"></i></button>
+                            <button type="submit" class="beta-btn primary" href="#" style="background-color: #881a1a;border-radius: 2px">Đặt hàng <i class="fa fa-chevron-right"></i>
+                            </button>                              
                             </div>
                         </div> <!-- .your-order -->
                     </div>

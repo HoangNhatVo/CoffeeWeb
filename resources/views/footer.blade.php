@@ -7,7 +7,7 @@
                     <a href="{{route('index')}}" id="logo">
                         <img src="website-assets/assets/dest/images/logo-cake.png" width="50px" alt="">
                     </a>
-                    <a>NoName Coffee </a>
+                    <a href="{{route('index')}}">NoName Coffee </a>
                 </div>
                 </div>
             </div>
@@ -16,12 +16,13 @@
                     <h4 class="widget-title">Information</h4>
                     <div>
                         <ul>
-                            <li><a href="#"><i class="fa fa-chevron-right"></i> Web Design</a></li>
+                            <li><a href="{{route('gioithieu')}}"><i class="fa fa-chevron-right"></i>  Team Developer</a></li>
+                            <!-- <li><a href="#"><i class="fa fa-chevron-right"></i> Web Design</a></li>
                             <li><a href="#"><i class="fa fa-chevron-right"></i> Web development</a></li>
                             <li><a href="#"><i class="fa fa-chevron-right"></i> Marketing</a></li>
                             <li><a href="#"><i class="fa fa-chevron-right"></i> Tips</a></li>
                             <li><a href="#"><i class="fa fa-chevron-right"></i> Resources</a></li>
-                            <li><a href="#"><i class="fa fa-chevron-right"></i> Illustrations</a></li>
+                            <li><a href="#"><i class="fa fa-chevron-right"></i> Illustrations</a></li> -->
                         </ul>
                     </div>
                 </div>

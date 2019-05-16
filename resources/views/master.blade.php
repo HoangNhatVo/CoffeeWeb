@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="website-assets/style_header.css">
 </head>
 <body>
-
+<div class="space10">&nbsp;</div>
 @include('header')
 <div class="rev-slider">
     @yield('content')

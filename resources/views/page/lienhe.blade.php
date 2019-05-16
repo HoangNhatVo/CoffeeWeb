@@ -34,10 +34,10 @@
                     <div class="space20">&nbsp;</div>
                     <form action="#" method="post" class="contact-form">
                         <div class="form-block">
-                            <input name="your-name" type="text" placeholder="Tên của bạn (bắt buộc)">
+                            <input name="your-name" type="text" placeholder="Tên của bạn*" autofocus="true">
                         </div>
                         <div class="form-block">
-                            <input name="your-email" type="email" placeholder="Địa chỉ email (bắt buộc)">
+                            <input name="your-email" type="email" placeholder="Địa chỉ Email*">
                         </div>
                         <div class="form-block">
                             <input name="your-subject" type="text" placeholder="Tiêu đề">
@@ -56,16 +56,22 @@
                     <div class="space20">&nbsp;</div>
 
                     <h6 class="contact-title">Địa chỉ</h6>
+                    <div class="space5">&nbsp;</div>
                     <p>
                         Số 227, đường Nguyễn Văn Cừ<br>
+                        <div class="space5">&nbsp;</div>
                         Phường 4, Quận 5<br>
+                        <div class="space5">&nbsp;</div>
                         Thành phố Hồ Chí Minh
                     </p>
                     <div class="space20">&nbsp;</div>
                     <h6 class="contact-title">Mọi thắc mắc xin gửi về</h6>
+                    <div class="space5">&nbsp;</div>
                     <p>
                         Số 227, đường Nguyễn Văn Cừ<br>
+                        <div class="space5">&nbsp;</div>
                         Phường 4, Quận 5, Thành phố Hồ Chí Minh<br>
+                        <div class="space5">&nbsp;</div>
                         <a href="mailto:Nonamelegendary@gmail.com">Nonamelegendary@gmail.com</a>
                     </p>
                     <div class="space20">&nbsp;</div>

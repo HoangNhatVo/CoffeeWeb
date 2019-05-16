@@ -6,7 +6,7 @@
                     <a href="{{route('index')}}" id="logo">
                         <img src="website-assets/assets/dest/images/logo-cake.png" width="50px" alt="">
                     </a>
-                    <a>NoName Coffee </a>
+                    <a href="{{route('index')}}">NoName Coffee </a>
                 </div>
             </div>
             <div class="pull-right auto-width-right">
@@ -53,7 +53,7 @@
                         <i class="fa fa-times"></i>
                     </a>
                     <div class="media">
-                        <a class="pull-left" href="#">
+                        <a class="pull-left" href="{{route('chitietsanpham', $product['item']['id'])}}">
                             <img src="upload/product/{{$product['item']['image']}}"
                             alt="">
                         </a>

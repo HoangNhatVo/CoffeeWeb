@@ -123,7 +123,7 @@
                                             </div>
                                             @endforeach
                                         </div>
-                                        <div class="row">{{$sp_khac->links()}}</div>
+                                        <!-- <div class="row">{{$sp_khac->links()}}</div> -->
                                     </div> <!-- .beta-products-list -->
                                 </div>
                             </div> <!-- end section with sidebar and main content -->

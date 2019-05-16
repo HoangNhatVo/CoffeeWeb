@@ -38,9 +38,12 @@
               </div>
               <div class="col-sm-7">
                <h5 class="other-title">Birth.</h5>
+               <div class="space5">&nbsp;</div>
               <p>
                 2/2/1998,<br/>
+                <div class="space5">&nbsp;</div>
                 227 Nguyễn Văn Cừ, P4, Q5<br/>
+                <div class="space5">&nbsp;</div>
                 Tp.Hồ Chí Minh
                </p>
                <div class="space20">&nbsp;</div>
@@ -62,9 +65,12 @@
               </div>
               <div class="col-sm-7">
                <h5 class="other-title">Birth.</h5>
+               <div class="space5">&nbsp;</div>
                <p>
                 08/01/1998,<br/>
+                <div class="space5">&nbsp;</div>
                 227 Nguyễn Văn Cừ, P4, Q5<br/>
+                <div class="space5">&nbsp;</div>
                 Tp.Hồ Chí Minh
                </p>
                <div class="space20">&nbsp;</div>
@@ -82,7 +88,7 @@
            </div>
           </div>
          </div>
-         <div class="space95">&nbsp;</div>
+         <div class="space50">&nbsp;</div>
          
          <!-- <h2 class="text-center wow fadeInDown">Our Passion for What We Do Transfers Into Our Services</h2>
          <div class="space20">&nbsp;</div>
