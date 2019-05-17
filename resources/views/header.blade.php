@@ -12,7 +12,7 @@
             <div class="pull-right auto-width-right">
                 <ul class="top-details menu-beta l-inline">
                     @if(Auth::check())
-                    <li><a href="" style="color: red"><b>Xin chào {{Auth::user()->full_name}}</b></a></li>
+                    <li><a href="" style="color: #f90"><b>Xin chào {{Auth::user()->full_name}}</b></a></li>
                     <li><a href="{{route('logout')}}">Đăng xuất</a></li>
                     @else
                     <li><a href="{{route('regiser')}}">Đăng ký</a></li>
@@ -32,7 +32,7 @@
             <div class="space10">&nbsp;</div>
             <div class="beta-comp">
                 <form role="search" method="get" id="searchform" action="{{route('search')}}">
-                    <input type="text" value="" name="key" id="s" placeholder="Nhập tên sản phẩm..."/>
+                    <input type="text" value="" name="key" id="s" placeholder="Nhập tên hoặc giá sản phẩm..."/>
                     <button class="fa fa-search" type="submit" id="searchsubmit"></button>
                 </form>
             </div>
@@ -41,11 +41,11 @@
 
                 <div class="cart">
                     <div class="beta-select"><i class="fa fa-shopping-cart">
-                    </i> Giỏ hàng (@if(Session::has('cart')){{Session('cart')->totalQty}}@else Trống) @endif
-                    <i class="fa fa-chevron-down"></i>
+                    </i> Giỏ hàng (@if(Session::has('cart')){{Session('cart')->totalQty}}) <i class="fa fa-chevron-down"></i>@else Trống) @endif
+                    <!-- <i class="fa fa-chevron-down"></i> -->
                 </div>
                 <div class="beta-dropdown cart-body">
-                    @if(Session::has('cart'))
+                    @if(Session::has('cart')) 
                     @foreach($product_cart as $product)
                     <div class="cart-item">
                         <a class="cart-item-delete"

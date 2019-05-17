@@ -26,7 +26,8 @@
             <div class="row">
                 <div class="col-sm-6">
                     @if(session('thongbao'))
-                    <div class="alert alert-success">
+                    <div class="alert alert-success" style="font-weight: bold;">
+                        <i class="fa fa-check"></i>
                         {{Session::get('thongbao')}}
                     </div>
                     @endif
@@ -34,8 +35,8 @@
                     <div class="space20">&nbsp;</div>
                         @if(Auth::check())
                     <div class="form-block">
-                        <label for="name">Họ tên*</label>
-                        <input type="text" name="name" placeholder="Họ tên" value="{{Auth::user()->full_name}}" required autofocus="true">
+                        <label for="name">Họ và tên*</label>
+                        <input type="text" name="name" placeholder="Họ và tên" value="{{Auth::user()->full_name}}" required autofocus="true" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                     </div>
 
                     <div class="form-block">
@@ -48,22 +49,22 @@
 
                     <div class="form-block">
                         <label for="email">Email*</label>
-                        <input type="email" id="email" name="email" value="{{Auth::user()->email}}" required placeholder="expample@gmail.com">
+                        <input type="email" id="email" name="email" value="{{Auth::user()->email}}" required placeholder="expample@gmail.com" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                     </div>
 
                     <div class="form-block">
                         <label for="adress">Địa chỉ*</label>
-                        <input type="text" id="address" name="address" value="{{Auth::user()->address}}" placeholder="Street Address" required>
+                        <input type="text" id="address" name="address" value="{{Auth::user()->address}}" placeholder="Street Address" required style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                     </div>
 
                     <div class="form-block">
                         <label for="phone">Điện thoại*</label>
-                        <input type="number" id="phone" name="phone" value="{{Auth::user()->phone}}" required>
+                        <input type="number" id="phone" name="phone" value="{{Auth::user()->phone}}" required style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px; padding-left: 10px;">
                     </div>
                             @else
                             <div class="form-block">
-                                <label for="name">Họ tên*</label>
-                                <input type="text" name="name" placeholder="Họ tên" required autofocus="true">
+                                <label for="name">Họ và tên*</label>
+                                <input type="text" name="name" placeholder="Họ và tên" required autofocus="true" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                             </div>
                             <div class="form-block">
                                 <label>Giới tính </label>
@@ -75,22 +76,22 @@
 
                             <div class="form-block">
                                 <label for="email">Email*</label>
-                                <input type="email" id="email" name="email"  required placeholder="expample@gmail.com">
+                                <input type="email" id="email" name="email"  required placeholder="expample@gmail.com" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                             </div>
 
                             <div class="form-block">
                                 <label for="adress">Địa chỉ*</label>
-                                <input type="text" id="address" name="address"  placeholder="Street Address" required>
+                                <input type="text" id="address" name="address"  placeholder="Street Address" required style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                             </div>
 
                             <div class="form-block">
                                 <label for="phone">Điện thoại*</label>
-                                <input type="number" id="phone" name="phone" required>
+                                <input type="number" id="phone" name="phone" required style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px; padding-left: 10px;">
                             </div>
                     @endif
                     <div class="form-block">
                         <label for="notes">Ghi chú</label>
-                        <textarea id="notes" name="notes"></textarea>
+                        <textarea id="notes" name="notes" style="border-radius: 4px;"></textarea>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -132,8 +133,10 @@
 
 
                         <div class="text-center">
-                            <button type="submit" class="beta-btn primary" href="#" style="background-color: #881a1a;border-radius: 2px">Đặt hàng <i class="fa fa-chevron-right"></i>
-                            </button>                              
+                            <!-- <button type="submit" class="beta-btn primary" href="#" style="background-color: #881a1a;border-radius: 2px">Đặt hàng <i class="fa fa-chevron-right"></i> -->
+                            <!-- </button>        -->
+                            <button id="btn_stylenew" type="submit" class="btn btn-primary" href="#">Đặt hàng <i id="exp" class="fa fa-chevron-right"></i>
+                            </button>                        
                             </div>
                         </div> <!-- .your-order -->
                     </div>

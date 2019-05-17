@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="website-assets/style_gioithieu.css">
     <link rel="stylesheet" type="text/css" href="website-assets/style_loaisp.css">
     <link rel="stylesheet" type="text/css" href="website-assets/style_header.css">
+    <link rel="stylesheet" type="text/css" href="website-assets/new_style.css">
 </head>
 <body>
 <div class="space10">&nbsp;</div>

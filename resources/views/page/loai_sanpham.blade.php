@@ -18,7 +18,7 @@
 <div class="container">
     <div id="content" class="space-top-none">
         <div class="main-content">
-            <div style=" font-weight: bold; font-size: 18px">{{$loai_sp->description}}</div>
+            <div style=" font-weight: bold; font-size: 18px; text-align: justify;">{{$loai_sp->description}}</div>
             <div class="space60">&nbsp;</div>
             <div class="row">
                 <div class="col-sm-3">

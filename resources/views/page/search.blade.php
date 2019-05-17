@@ -18,11 +18,11 @@
 <div class="container">
     <div id="content" class="space-top-none">
         <div class="main-content">
-            <div class="space60"></div>
+            <!-- <div class="space10">&nbsp;</div> -->
             <div class="row">
                 <div class="col-sm-12">
                     <div class="beta-products-list">
-                        <h4></h4>
+                        <!-- <h4></h4> -->
                         <div class="beta-products-details">
                             <p class="pull-left">Tìm thấy {{count($product)}} sản phẩm</p>
                             <div class="clearfix"></div>
@@ -67,7 +67,7 @@
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
-                                     <div class="space50">&nbsp;</div>
+                                     <div class="space10">&nbsp;</div>
                                 </div>
                                 @endforeach
                             </div>

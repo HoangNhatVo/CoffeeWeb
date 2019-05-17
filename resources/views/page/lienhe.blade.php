@@ -34,20 +34,20 @@
                     <div class="space20">&nbsp;</div>
                     <form action="#" method="post" class="contact-form">
                         <div class="form-block">
-                            <input name="your-name" type="text" placeholder="Tên của bạn*" autofocus="true">
+                            <input name="your-name" type="text" placeholder="Họ và tên*" autofocus="true" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                         </div>
                         <div class="form-block">
-                            <input name="your-email" type="email" placeholder="Địa chỉ Email*">
+                            <input name="your-email" type="email" placeholder="Địa chỉ Email*" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                         </div>
                         <div class="form-block">
-                            <input name="your-subject" type="text" placeholder="Tiêu đề">
+                            <input name="your-subject" type="text" placeholder="Tiêu đề" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                         </div>
                         <div class="form-block">
-                            <textarea name="your-message" placeholder="Nội dung"></textarea>
+                            <textarea name="your-message" placeholder="Nội dung" style="border-radius: 4px;"></textarea>
                         </div>
                         <div class="form-block">
-                            <button type="submit" class="beta-btn primary">Gửi hỗ trợ<i
-                                        class="fa fa-chevron-right"></i></button>
+                            <button id="btn_stylenew" type="submit" class="beta-btn primary">Gửi hỗ trợ<i
+                                        class="fa fa-chevron-right" ></i></button>
                         </div>
                     </form>
                 </div>

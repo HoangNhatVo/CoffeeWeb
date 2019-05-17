@@ -25,49 +25,55 @@
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
                         @if(count($errors)>0)
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger" style="font-weight: bold;">
+                                <!-- <i class="fa fa-times"></i> -->
                                 @foreach($errors->all() as $err)
+                                <i class="fa fa-times"></i>
                                     {{$err}}
+                                    <br>
                                 @endforeach
                             </div>
                         @endif
                         @if(session('thongbao'))
-                            <div class="alert alert-success">
+                            <div class="alert alert-success" style="font-weight: bold;">
+                                <i class="fa fa-check"></i>
                                 {{Session::get('thongbao')}}
                             </div>
                         @endif
-                        <h4>Đăng ký</h4>
+                        <h4>Thông tin đăng ký</h4>
                         <div class="space20">&nbsp;</div>
 
                         <div class="form-block">
                             <label for="email">Địa chỉ email*</label>
-                            <input  type="email" name="email" required autofocus style="height:37px">
+                            <input  type="email" name="email" required autofocus style="height:37px;border-radius: 4px;">
                         </div>
 
                         <div class="form-block">
                             <label for="your_last_name">Họ và tên*</label>
-                            <input style="height:37px" type="text" name="full_name" required>
+                            <input style="height:37px; border-radius: 4px;" type="text" name="full_name" required>
                         </div>
 
                         <div class="form-block">
                             <label for="adress">Địa chỉ*</label>
-                            <input style="height:37px" type="text" name="address" required>
+                            <input style="height:37px; border-radius: 4px;" type="text" name="address" required>
                         </div>
 
                         <div class="form-block">
                             <label for="phone">Số điện thoại*</label>
-                            <input style="border:1px solid #e1e1e1;height: 37px;" type="number" name="phone" required>
+                            <input style="border:1px solid #e1e1e1;height: 37px; border-radius: 4px;" type="number" name="phone" required>
                         </div>
                         <div class="form-block">
                             <label for="phone">Mật khẩu*</label>
-                            <input style="border:1px solid #e1e1e1;height: 37px;"  type="password" name="password" required>
+                            <input style="border:1px solid #e1e1e1;height: 37px; border-radius: 4px;"  type="password" name="password" required>
                         </div>
                         <div class="form-block">
                             <label for="phone">Nhập lại mật khẩu*</label>
-                            <input style="border:1px solid #e1e1e1;height: 37px;"  type="password" name="re_password" required>
+                            <input style="border:1px solid #e1e1e1;height: 37px; border-radius: 4px;"  type="password" name="re_password" required>
                         </div>
                         <div class="form-block">
-                            <button style="background-color: #881a1a;border:none" type="submit" class="btn btn-primary">Đăng ký</button>
+                            <!-- <button style="background-color: #881a1a;border:none; " type="submit" class="btn btn-primary">Đăng ký</button> -->
+                            <button id="btn_stylenew" type="submit" class="btn btn-primary">Đăng ký
+                            </button>
                         </div>
                     </div>
                     <div class="col-sm-3"></div>

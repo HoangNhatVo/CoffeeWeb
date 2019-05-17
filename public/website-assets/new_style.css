@@ -1,0 +1,22 @@
+#btn_stylenew{
+	border-radius: 0px;
+	border: 1px solid #881a1a;
+	background-color: #fff;
+	color: #606366;
+	padding: 10px 20px;
+	line-height: 100%;
+	text-align: center;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+#btn_stylenew:hover{
+	background-color: #881a1a;
+	color: white;
+	transition: 0.3s;
+}
+
+#exp{
+	color: #f90;
+	font-size: 10px;
+}
