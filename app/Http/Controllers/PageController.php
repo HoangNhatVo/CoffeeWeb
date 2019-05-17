@@ -139,8 +139,8 @@ class PageController extends Controller
                 're_password' => 'required|same:password'
             ],
             [
-                'email.required' => 'Vui lòng nhập email',
-                'email.email' => 'Không đúng định dạng email',
+                'email.required' => 'Vui lòng nhập Email',
+                'email.email' => 'Không đúng định dạng Email',
                 'email.unique' => 'Email đã có người sử dụng',
                 'address.required' => 'Vui lòng nhập địa chỉ',
                 'phone.required' => 'Vui lòng nhập số điện thoại',
@@ -167,7 +167,7 @@ class PageController extends Controller
                 'password' => 'required'
             ],
             [
-                'email.required' => 'Vui lòng nhập email',
+                'email.required' => 'Vui lòng nhập Email',
                 'email.email' => 'Email không đúng định dạng',
                 'password.required' => 'Vui lòng nhập mật khẩu',
             ]
@@ -193,5 +193,23 @@ class PageController extends Controller
             ->orWhere('unit_price', $req->key)
             ->get();
         return view('page.search', compact('product', 'req'));
+    }
+
+    public function postLienhe(Request $req){
+         $this->validate($req,
+            [
+                'your-name' => 'required',
+                'your-email' => 'required|email',
+                'your-message' => 'required'
+            ],
+            [
+                'your-name.required' => 'Vui lòng nhập họ tên',
+                'your-email.required' => 'Vui lòng nhập Email',
+                'your-email.email' => 'Email không đúng định dạng',
+                'your-message.required' => 'Vui lòng nhập nội dung cần hỗ trợ'
+            ]
+        );
+
+        return redirect()->back()->with('thongbao','Hỗ trợ đã được gửi');
     }
 }

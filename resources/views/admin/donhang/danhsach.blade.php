@@ -15,7 +15,8 @@
                         <small>Danh sách</small>
                     </h1>
                     @if(session('thongbao'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success"style="font-weight: bold;">
+                            <i class="fa fa-check"></i>
                             {{Session::get('thongbao')}}
                         </div>
                     @endif

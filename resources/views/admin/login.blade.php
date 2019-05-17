@@ -21,6 +21,7 @@
 
     <!-- Custom Fonts -->
     <link href="admin-assets/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="admin-assets/dist/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -29,20 +30,22 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-            <div class="login-panel panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Login</h3>
+            <div class="login-panel panel panel-default" style="border-color: #881a1a;">
+                <div class="panel-heading" style="background-color: #881a1a;">
+                    <h3 class="panel-title" style="text-align: center; font-weight: bold; color: #fff;">Login</h3>
                 </div>
                 <div class="panel-body">
                     @if(count($errors)>0)
-                        <div class="alert alert-danger">
+                        <div class="alert alert-danger" style="font-weight: bold;">
                             @foreach($errors->all() as $err)
+                            <i class="fa fa-times"></i>
                                 {{$err}}<br>
                             @endforeach
                         </div>
                     @endif
                     @if(session('thongbao'))
-                        <div class="alert alert-danger">
+                        <div class="alert alert-danger" style="font-weight: bold;">
+                            <i class="fa fa-times"></i>
                             {{Session::get('thongbao')}}
                         </div>
                     @endif
@@ -55,7 +58,7 @@
                             <div class="form-group">
                                 <input class="form-control" placeholder="Password" name="password" type="password" autofocus>
                             </div>
-                            <button type="submit" class="btn btn-lg btn-success btn-block">Đăng nhập</button>
+                            <button type="submit"  class="btn btn-lg btn-success btn-block" id="btnLogin">Đăng nhập</button>
                         </fieldset>
                     </form>
                 </div>

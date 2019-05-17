@@ -11,11 +11,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Người dùng
+                    <h1 style="color: #881a1a;" class="page-header">Người dùng
                         <small>Danh sách</small>
                     </h1>
                     @if(session('thongbao'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success" style="font-weight: bold;">
+                            <i class="fa fa-check"></i>
                             {{Session::get('thongbao')}}
                         </div>
                     @endif

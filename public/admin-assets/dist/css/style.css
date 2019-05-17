@@ -1,0 +1,35 @@
+#btnLogin{
+	width: 100px; 
+	height: 35px; 
+	font-size: 15px; 
+	padding: 0px; 
+	background-color: #881a1a; 
+	border-radius: 4px;
+	border: 1px solid #881a1a;
+	color: #fff;
+}
+
+#btnLogin:hover{
+	background-color: #450E0E;
+}
+
+#admin-panel{
+	color: #881a1a;
+	 font-weight: bold; 
+	 font-size: 18px; 
+	 padding: 15px 15px; 
+	 line-height: 20px;
+}
+#admin-panel:hover{
+	text-decoration: none;
+}
+
+#btn_style_admin{
+	border: 1px solid #881a1a;
+	color: #881a1a;
+}
+
+#btn_style_admin:hover{
+	background-color: #881a1a;
+	color: #fff;
+}

@@ -213,5 +213,7 @@ Route::get('search', [
     'as' => 'search',
     'uses' => 'PageController@getSearch'
 ]);
-
-
+Route::post('lien-he', [
+    'as' => 'lienhe',
+    'uses' => 'PageController@postLienHe'
+]);

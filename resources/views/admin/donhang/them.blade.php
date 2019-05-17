@@ -15,14 +15,16 @@
                 <!-- /.col-lg-12 -->
                 <div class="col-lg-7" style="padding-bottom:120px">
                     @if(count($errors)>0)
-                        <div class="alert alert-danger">
+                        <div class="alert alert-danger"style="font-weight: bold;">
                             @foreach($errors->all() as $err)
+                            <i class="fa fa-times"></i>
                                 {{$err}}<br>
                             @endforeach
                         </div>
                     @endif
                     @if(session('thongbao'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success"style="font-weight: bold;">
+                            <i class="fa fa-check"></i>
                             {{Session::get('thongbao')}}
                         </div>
                     @endif
@@ -59,8 +61,8 @@
                                 <option value="Có">Có</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-default">Thêm người dùng</button>
-                        <button type="reset" class="btn btn-default">Reset</button>
+                        <button type="submit" class="btn btn-default" id="btn_style_admin">Thêm người dùng</button>
+                        <button type="reset" class="btn btn-default" id="btn_style_admin">Reset</button>
                     </form>
                 </div>
             </div>

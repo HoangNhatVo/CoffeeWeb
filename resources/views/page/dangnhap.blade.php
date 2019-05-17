@@ -24,7 +24,8 @@
                     <div class="col-sm-3"></div>
                     <div class="col-sm-6">
                         @if(session('thongbao'))
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger" style="font-weight: bold;">
+                                <i class="fa fa-times"></i>
                                 {{Session::get('thongbao')}}
                             </div>
                         @endif
