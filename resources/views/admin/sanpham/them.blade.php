@@ -65,6 +65,7 @@
                                 <option value="hộp">Hộp</option>
                                 <option value="cái">Cái</option>
                                 <option value="ly">Ly</option>
+                                <option value="phần">Lon</option>
                                 <option value="phần">Phần</option>
                             </select>
                         </div>
