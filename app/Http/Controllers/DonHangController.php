@@ -122,20 +122,17 @@ class DonHangController extends Controller
 
     public function getXoa($id)
     {
-        // $sanpham = Product::find($id);
         $billdetail = BillDetail::find($id);
-        $bill = Bill::where('id',$billdetail->id_bill)->get();
-        $bill->total = $bill->get('total') - ($billdetail->quatity*$billdetail->unit_price);
-        // $bill->save();
-        $customer = Customer::where('id',$bill->get('id_customer'))->get();
+        $bill = Bill::where('id',$billdetail->id_bill)->first();
+        $tmp = $bill->total - ($billdetail->quantity*$billdetail->unit_price);
+        $bill->total = $tmp;
+        $bill->save();
+        $customer = Customer::where('id',$bill->id_customer)->first();
         $billdetail->delete();
-        if($bill->total==0){
+        if($tmp == 0){
             $bill->delete();
             $customer->delete();
         }
-        // $billdetail->delete();
-        // $sanpham->delete();
-
         return redirect()->back()->with('thongbao', 'Xuất đơn hàng thành công');
     }
 }

@@ -20,12 +20,12 @@
                 <li>
                     <a style="color: #881a1a;" href={{route('admin-dsuser')}}>
                         <i class="fa fa-user fa-fw"></i>
-                        Thông tin người dùng
+                        Thông tin Admin
                     </a>
                 </li>
                 <li><a style="color: #881a1a;" href="#">
                         <i class="fa fa-gear fa-fw"></i>
-                        Cài đặt
+                        Cập nhật thông tin
                     </a>
                 </li>
                 <li class="divider"></li>

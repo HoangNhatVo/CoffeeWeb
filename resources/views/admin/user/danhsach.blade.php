@@ -26,13 +26,13 @@
                     <thead>
                     <tr align="center">
                         <th class="center" width="50px">ID</th>
-                        <th class="center" width="150px">Full name</th>
-                        <th class="center" width="150px">Email</th>
-                        <th class="center" width="0px">Phone</th>
-                        <th class="center" width="500px">Address</th>
+                        <th class="center" width="150px">Họ tên</th>
+                        <th class="center" width="50px">Email</th>
+                        <th class="center" width="0px">SĐT</th>
+                        <th class="center" width="300px">Địa chỉ</th>
                         <th class="center" width="100px">Admin</th>
-                        <th class="center" width="150px">Created</th>
-                        <th class="center" width="150px">Updated</th>
+                        <th class="center" width="150px">Thời gian tạo</th>
+                        <!-- <th class="center" width="150px">Updated</th> -->
                         <!-- <th class="center" width="50px">Xoá</th> -->
                         <!-- <th class="center" width="50px">Sửa</th> -->
                     </tr>
@@ -43,11 +43,11 @@
                             <td class="center">{{$us->id}}</td>
                             <td>{{$us->full_name}}</td>
                             <td>{{$us->email}}</td>
-                            <td>{{$us->phone}}</td>
+                            <td class="center">{{$us->phone}}</td>
                             <td>{{$us->address}}</td>
-                            <td>{{$us->isAdmin}}</td>
+                            <td class="center">{{$us->isAdmin}}</td>
                             <td class="center">{{$us->created_at}}</td>
-                            <td class="center">{{$us->updated_at}}</td>
+                            <!-- <td class="center">{{$us->updated_at}}</td> -->
                             <!-- <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a style="text-decoration: none;"
                                         href={{route('admin-xoauser',$us->id)}}>Xoá</a></td>
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a style="text-decoration: none;"

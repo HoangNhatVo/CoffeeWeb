@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <base href="{{asset('')}}">
 
-    <title>Login admin dashboard</title>
+    <title>Admin Login</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="admin-assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -53,12 +53,12 @@
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Email" name="email" value="admin" >
+                                <input class="form-control" placeholder="Email" name="email" autofocus >
                             </div>
                             <div class="form-group">
                                 <input class="form-control" placeholder="Password" name="password" type="password" autofocus>
                             </div>
-                            <button type="submit"  class="btn btn-lg btn-success btn-block" id="btnLogin">Đăng nhập</button>
+                            <button type="submit" name="Login" class="btn btn-lg btn-success btn-block" id="btnLogin">Đăng nhập</button>
                         </fieldset>
                     </form>
                 </div>

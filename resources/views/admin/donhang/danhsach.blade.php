@@ -25,13 +25,14 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                     <tr align="center">
-                        <th class="center" width="100px">Tên khách hàng</th>                        
+                        <th class="center" width="70px">Tên khách hàng</th>                        
                         <th class="center" width="50px">Email</th>
-                        <th class="center" width="10px">SĐT</th>
-                        <th class="center" width="10px">Tên sản phẩm</th>
-                        <th class="center" width="50px">Số lượng</th>
-                        <th class="center" width="100px">Đơn giá 1 sản phẩm</th>
-                        <th class="center" width="50px">Xuất đơn hàng</th>
+                        <th class="center" width="30px">SĐT</th>
+                        <th class="center" width="60px">Tên sản phẩm</th>
+                        <th class="center" width="40px">Số lượng</th>
+                        <th class="center" width="50px">Đơn giá 1 sản phẩm</th>
+                        <th class="center" width="40px">Thời gian đặt</th>
+                        <th class="center" width="60px">Xuất đơn hàng</th>
 
                         <!-- <th class="center" width="50px">ID</th>
                         <th class="center" width="150px">Name</th>
@@ -55,7 +56,7 @@
                                         @if($b->id_customer == $c->id)
                                         <td>{{$c->name}}</td>
                                         <td>{{$c->email}}</td>
-                                        <td class="center">{{$c->phone_number}}</td>                                       
+                                        <td class="center">{{$c->phone_number}}</td>
                                         @endif
                                     @endforeach
 
@@ -67,19 +68,12 @@
 
                                     <td class="center">{{$bd->quantity}}</td>
                                     <td class="center">{{number_format($bd->unit_price)}} đồng</td>
+                                    <td class="center">{{$bd->created_at}}</td>
                                     <td class="center"><i class="fa fa-trash-o fa-fw"></i><a style="text-decoration: none;" href="{{route('admin-xoadonhang',$bd->id)}}"> Xuất</a></td>
 
                                 @endif
                                 
                             @endforeach
-
-                            <!-- @foreach($products as $p)
-                                @if($bd->id_product == $p->id)
-                                <td>{{$p->name}}</td>
-                                @endif
-                            @endforeach
-                            <td>{{$bd->quantity}}</td>
-                            <td>{{$bd->unit_price}}</td> -->
                         </tr>
                         @endforeach
 

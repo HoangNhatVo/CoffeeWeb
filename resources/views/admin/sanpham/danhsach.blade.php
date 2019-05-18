@@ -26,18 +26,18 @@
                     <thead>
                     <tr align="center">
                         <th class="center" width="50px">ID</th>
-                        <th class="center" width="100px">Product</th>
-                        <th class="center" width="50px">Type</th>
-                        <th class="center" width="500px">Description</th>
-                        <th class="center" width="100px">Price</th>
-                        <th class="center" width="100px">Promotion</th>
-                        <th class="center">Image</th>
-                        <th class="center" width="50px">Unit</th>
-                        <th class="center" width="50px">New</th>
-                        <th class="center" width="100px">Created</th>
-                        <th class="center" width="100px">Updated</th>
-                        <th class="center" width="50px">Del</th>
-                        <th class="center" width="50px">Edit</th>
+                        <th class="center" width="100px">Tên SP</th>
+                        <th class="center" width="50px">Loại SP</th>
+                        <th class="center" width="500px">Mô tả</th>
+                        <th class="center" width="100px">Giá gốc</th>
+                        <th class="center" width="100px">Giá KM</th>
+                        <th class="center">Ảnh</th>
+                        <th class="center" width="50px">Đơn vị</th>
+                        <th class="center" width="50px">SP mới/cũ</th>
+                        <th class="center" width="100px">Thời gian tạo</th>
+                        <th class="center" width="100px">Thời gian cập nhập</th>
+                        <th class="center" width="50px">Xóa</th>
+                        <th class="center" width="50px">Sửa</th>
                     </tr>
                     </thead>
                     <tbody>

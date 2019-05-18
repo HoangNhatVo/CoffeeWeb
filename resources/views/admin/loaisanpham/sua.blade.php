@@ -31,7 +31,7 @@
                     <form action="{{route('admin-sualoaisp', $loai_sp->id)}}" method="POST">
                         <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                         <div class="form-group">
-                            <label>Tên thể loại</label>
+                            <label>Tên loại sản phẩm</label>
                             <input class="form-control" name="name" placeholder="Nhập tên loại sản phẩm"
                                    value="{{$loai_sp->name}}"/>
                         </div>

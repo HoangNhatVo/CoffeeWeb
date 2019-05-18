@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,7 +26,7 @@ class AdminController extends Controller
                 'password' => 'required'
             ],
             [
-                'email.required' => 'Vui lòng nhập tên đăng nhập',
+                'email.required' => 'Vui lòng nhập Email đăng nhập',
                 'password.required' => 'Vui lòng nhập mật khẩu',
             ]
         );

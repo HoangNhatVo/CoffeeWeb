@@ -26,12 +26,12 @@
                     <thead>
                     <tr align="center">
                         <th class="center" width="50px">ID</th>
-                        <th class="center" width="100px">Name</th>
-                        <th class="center">Description</th>
-                        <th class="center" width="150px">Created</th>
-                        <th class="center" width="150px">Updated</th>
-                        <th class="center" width="50px">Del</th>
-                        <th class="center" width="50px">Edit</th>
+                        <th class="center" width="100px">Tên loại SP</th>
+                        <th class="center">Mô tả</th>
+                        <th class="center" width="150px">Thời gian tạo</th>
+                        <th class="center" width="150px">Thời gian cập nhật</th>
+                        <th class="center" width="50px">Xóa</th>
+                        <th class="center" width="50px">Sửa</th>
                     </tr>
                     </thead>
                     <tbody>
