@@ -37,19 +37,19 @@ Route::group(['prefix' => 'admin', 'middleware'=>'adminLogin'], function () {
             'as' => 'admin-dsdonhang',
             'uses' => 'DonHangController@getDanhSach']);
 
-        Route::get('them', [
-            'as' => 'admin-themdonhang',
-            'uses' => 'DonHangController@getThem']);
-        Route::post('them', [
-            'as' => 'admin-themdonhang',
-            'uses' => 'DonHangController@postThem']);
+        // Route::get('them', [
+        //     'as' => 'admin-themdonhang',
+        //     'uses' => 'DonHangController@getThem']);
+        // Route::post('them', [
+        //     'as' => 'admin-themdonhang',
+        //     'uses' => 'DonHangController@postThem']);
 
-        Route::get('sua/{id}', [
-            'as' => 'admin-suadonhang',
-            'uses' => 'DonHangController@getSua']);
-        Route::post('sua/{id}', [
-            'as' => 'admin-suadonhang',
-            'uses' => 'DonHangController@postSua']);
+        // Route::get('sua/{id}', [
+        //     'as' => 'admin-suadonhang',
+        //     'uses' => 'DonHangController@getSua']);
+        // Route::post('sua/{id}', [
+        //     'as' => 'admin-suadonhang',
+        //     'uses' => 'DonHangController@postSua']);
 
         Route::get('xoa/{id}', [
             'as' => 'admin-xoadonhang',

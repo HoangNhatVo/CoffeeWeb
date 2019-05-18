@@ -44,23 +44,23 @@
                     @foreach($sanpham as $sp)
                         <tr class="odd gradeX">
                             <td class="center">{{$sp->id}}</td>
-                            <td>{{$sp->name}}</td>
+                            <td class="center">{{$sp->name}}</td>
                             <td class="center">{{$sp->id_type}}</td>
-                            <td>{{$sp->description}}</td>
+                            <td style="text-align: justify;">{{$sp->description}}</td>
                             <td class="center">{{number_format($sp->unit_price)}} đồng</td>
                             @if($sp->promotion_price!=0)
                                 <td class="center">{{number_format($sp->promotion_price)}} đồng</td>
                             @else
                                 <td class="center"></td>
                             @endif
-                            <td><img src="upload/product/{{$sp->image}}" width="50px" height="50px">{{$sp->image}}</td>
+                            <td class="center"><img src="upload/product/{{$sp->image}}" width="50px" height="50px">{{$sp->image}}</td>
                             <td class="center">{{$sp->unit}}</td>
                             <td class="center">{{$sp->new}}</td>
                             <td class="center">{{$sp->created_at}}</td>
                             <td class="center">{{$sp->updated_at}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a style="text-decoration: none;"
                                         href={{route('admin-xoasp',$sp->id)}}>Xoá</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a style="text-decoration: none;"
                                         href={{route('admin-suasp',$sp->id)}}>Sửa</a></td>
                         </tr>
                     @endforeach

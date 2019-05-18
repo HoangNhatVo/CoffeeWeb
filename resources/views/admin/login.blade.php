@@ -53,7 +53,7 @@
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Username" name="email" value="admin" >
+                                <input class="form-control" placeholder="Email" name="email" value="admin" >
                             </div>
                             <div class="form-group">
                                 <input class="form-control" placeholder="Password" name="password" type="password" autofocus>

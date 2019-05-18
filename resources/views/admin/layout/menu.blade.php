@@ -20,9 +20,7 @@
                     <li>
                         <a style="color: #881a1a;" href={{route('admin-dsdonhang')}}>Danh sách</a>
                     </li>
-                    <!-- <li>
-                        <a style="color: #881a1a;" href={{route('admin-themdonhang')}}>Thêm</a>
-                    </li> -->
+                    
                 </ul> <!-- /.nav-second-level -->
             </li>
             <li>
@@ -55,7 +53,7 @@
                         <a style="color: #881a1a;" href={{route('admin-dsuser')}}>Danh sách</a>
                     </li>
                     <li>
-                        <a style="color: #881a1a;" href={{route('admin-themuser')}}>Thêm</a>
+                        <a style="color: #881a1a;" href={{route('admin-themuser')}}>Thêm Admin</a>
                     </li>
                 </ul> <!-- /.nav-second-level -->
             </li>

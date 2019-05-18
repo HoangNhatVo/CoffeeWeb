@@ -4,14 +4,14 @@
             text-align: center;
         }</style>
 
-    <title>Danh sách người dùng</title>
+    <title>Danh sách đơn hàng</title>
 
     <!-- Page Content -->
     <div id="page-wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Đơn hàng
+                    <h1 style="color: #881a1a;" class="page-header">Đơn hàng
                         <small>Danh sách</small>
                     </h1>
                     @if(session('thongbao'))
@@ -25,35 +25,82 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                     <tr align="center">
-                        <th class="center" width="50px">ID</th>
-                        <th class="center" width="150px">Full name</th>
-                        <th class="center" width="150px">Email</th>
-                        <th class="center" width="0px">Phone</th>
+                        <th class="center" width="100px">Tên khách hàng</th>                        
+                        <th class="center" width="50px">Email</th>
+                        <th class="center" width="10px">SĐT</th>
+                        <th class="center" width="10px">Tên sản phẩm</th>
+                        <th class="center" width="50px">Số lượng</th>
+                        <th class="center" width="100px">Đơn giá 1 sản phẩm</th>
+                        <th class="center" width="50px">Xuất đơn hàng</th>
+
+                        <!-- <th class="center" width="50px">ID</th>
+                        <th class="center" width="150px">Name</th>
+                        <th class="center" width="150px">Gender</th>
+                        <th class="center" width="0px">Email</th>
                         <th class="center" width="500px">Address</th>
-                        <th class="center" width="100px">Admin</th>
+                        <th class="center" width="100px">Phone</th>
+                        <th class="center" width="100px">Note</th>
                         <th class="center" width="150px">Created</th>
-                        <th class="center" width="150px">Updated</th>
-                        <th class="center" width="50px">Xoá</th>
-                        <th class="center" width="50px">Sửa</th>
+                        <th class="center" width="150px">Updated</th> -->
+                        <!-- <th class="center" width="50px">Xoá</th> -->
+                        <!-- <th class="center" width="50px">Sửa</th> -->
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($user as $us)
+                        @foreach($billdetail as $bd)
+                        <tr class="odd gradeX">
+                            @foreach($bill as $b)
+                                @if($bd->id_bill == $b->id)
+                                    @foreach($customer as $c)
+                                        @if($b->id_customer == $c->id)
+                                        <td>{{$c->name}}</td>
+                                        <td>{{$c->email}}</td>
+                                        <td class="center">{{$c->phone_number}}</td>                                       
+                                        @endif
+                                    @endforeach
+
+                                    @foreach($products as $p)
+                                        @if($bd->id_product == $p->id)
+                                        <td>{{$p->name}}</td>                                
+                                        @endif
+                                    @endforeach
+
+                                    <td class="center">{{$bd->quantity}}</td>
+                                    <td class="center">{{number_format($bd->unit_price)}} đồng</td>
+                                    <td class="center"><i class="fa fa-trash-o fa-fw"></i><a style="text-decoration: none;" href="{{route('admin-xoadonhang',$bd->id)}}"> Xuất</a></td>
+
+                                @endif
+                                
+                            @endforeach
+
+                            <!-- @foreach($products as $p)
+                                @if($bd->id_product == $p->id)
+                                <td>{{$p->name}}</td>
+                                @endif
+                            @endforeach
+                            <td>{{$bd->quantity}}</td>
+                            <td>{{$bd->unit_price}}</td> -->
+                        </tr>
+                        @endforeach
+
+
+                    <!-- @foreach($customer as $us)
                         <tr class="odd gradeX">
                             <td class="center">{{$us->id}}</td>
-                            <td>{{$us->full_name}}</td>
+                            <td>{{$us->name}}</td>
+                            <td>{{$us->gender}}</td>
                             <td>{{$us->email}}</td>
-                            <td>{{$us->phone}}</td>
                             <td>{{$us->address}}</td>
-                            <td>{{$us->isAdmin}}</td>
+                            <td>{{$us->phone_number}}</td>
+                            <td>{{$us->note}}</td>
                             <td class="center">{{$us->created_at}}</td>
                             <td class="center">{{$us->updated_at}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a
-                                        href={{route('admin-xoauser',$us->id)}}>Xoá</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a
-                                        href={{route('admin-suauser',$us->id)}}>Sửa</a></td>
-                        </tr>
-                    @endforeach
+                            <!-- <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a -->
+                                        <!-- href={{route('admin-xoauser',$us->id)}}>Xoá</a></td> -->
+                            <!-- <td class="center"><i class="fa fa-pencil fa-fw"></i> <a -->
+                                        <!-- href={{route('admin-suauser',$us->id)}}>Sửa</a></td> -->
+                        <!-- </tr> -->
+                    <!-- @endforeach -->
                 </table>
             </div>
             <!-- /.row -->

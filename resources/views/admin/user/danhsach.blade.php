@@ -33,8 +33,8 @@
                         <th class="center" width="100px">Admin</th>
                         <th class="center" width="150px">Created</th>
                         <th class="center" width="150px">Updated</th>
-                        <th class="center" width="50px">Xoá</th>
-                        <th class="center" width="50px">Sửa</th>
+                        <!-- <th class="center" width="50px">Xoá</th> -->
+                        <!-- <th class="center" width="50px">Sửa</th> -->
                     </tr>
                     </thead>
                     <tbody>
@@ -48,10 +48,10 @@
                             <td>{{$us->isAdmin}}</td>
                             <td class="center">{{$us->created_at}}</td>
                             <td class="center">{{$us->updated_at}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a
+                            <!-- <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a style="text-decoration: none;"
                                         href={{route('admin-xoauser',$us->id)}}>Xoá</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a
-                                        href={{route('admin-suauser',$us->id)}}>Sửa</a></td>
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a style="text-decoration: none;"
+                                        href={{route('admin-suauser',$us->id)}}>Sửa</a></td> -->
                         </tr>
                     @endforeach
                 </table>

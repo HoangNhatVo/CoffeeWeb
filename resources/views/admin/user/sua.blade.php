@@ -70,7 +70,8 @@
                             </select>
                         </div>
                         <button type="submit" class="btn btn-default" id="btn_style_admin">Sửa người dùng</button>
-                        <button type="reset" class="btn btn-default" id="btn_style_admin">Reset</button>
+                        <!-- <button type="reset" class="btn btn-default" id="btn_style_admin">Reset</button> -->
+                        <a class="btn btn-default" id="btn_style_admin" href="{{route('admin-dsuser')}}">Trở về</a>
                     </form>
                 </div>
             </div>

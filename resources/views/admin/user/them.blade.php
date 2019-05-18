@@ -56,13 +56,14 @@
                         </div>
                         <div class="form-group">
                             <label>Quyền quản trị</label>
-                            <select class="form-control" name="isAdmin">
+                            <select class="form-control" name="isAdmin" disabled="disabled">
                                 <option value="Không">Không</option>
-                                <option value="Có">Có</option>
+                                <option value="Có" selected="selected">Có</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-default" id="btn_style_admin">Thêm người dùng</button>
-                        <button type="reset" class="btn btn-default" id="btn_style_admin">Reset</button>
+                        <!-- <button type="reset" class="btn btn-default" id="btn_style_admin">Reset</button> -->
+                        <a class="btn btn-default" id="btn_style_admin" href="{{route('admin-dsuser')}}">Trở về</a>
                     </form>
                 </div>
             </div>

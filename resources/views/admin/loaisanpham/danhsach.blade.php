@@ -38,13 +38,13 @@
                     @foreach($loai_sp as $lsp)
                         <tr class="odd gradeX">
                             <td class="center">{{$lsp->id}}</td>
-                            <td>{{$lsp->name}}</td>
-                            <td>{{$lsp->description}}</td>
+                            <td class="center">{{$lsp->name}}</td>
+                            <td style="text-align: justify;">{{$lsp->description}}</td>
                             <td class="center">{{$lsp->created_at}}</td>
                             <td class="center">{{$lsp->updated_at}}</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a style="text-decoration: none;" 
                                         href={{route('admin-xoaloaisp', $lsp->id)}}>Xoá</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a style="text-decoration: none;"
                                         href={{route('admin-sualoaisp', $lsp->id)}}>Sửa</a></td>
                         </tr>
                     @endforeach
