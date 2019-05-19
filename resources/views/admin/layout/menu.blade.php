@@ -57,6 +57,16 @@
                     </li>
                 </ul> <!-- /.nav-second-level -->
             </li>
+
+            <li>
+                <a style="color: #881a1a;" href="#"><i class="fa fa-headphones"></i> Hỗ trợ khách hàng<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a style="color: #881a1a;" href="{{route('admin-dshotro')}}">Danh sách</a>
+                    </li>
+                    
+                </ul>
+            </li>
         </ul>
     </div> <!-- /.sidebar-collapse -->
 </div>

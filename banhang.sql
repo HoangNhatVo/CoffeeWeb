@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2019 at 11:10 AM
+-- Generation Time: May 19, 2019 at 01:10 PM
 -- Server version: 10.1.39-MariaDB
 -- PHP Version: 7.3.5
 
@@ -51,7 +51,7 @@ CREATE TABLE `bill_detail` (
   `id_product` int(10) NOT NULL,
   `quantity` int(11) NOT NULL COMMENT 'số lượng',
   `unit_price` double NOT NULL,
-  `tinhtrang` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -150,6 +150,23 @@ INSERT INTO `slide` (`id`, `link`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `support`
+--
+
+CREATE TABLE `support` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `full_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `content` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Chưa phản hồi',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `type_products`
 --
 
@@ -196,7 +213,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `full_name`, `email`, `isAdmin`, `password`, `phone`, `address`, `remember_token`, `created_at`, `updated_at`) VALUES
 (2, 'Nguyễn Anh Tuấn', 'ntuan.2502@gmail.com', 'Không', '$2y$10$Q7RQNwCLOD0y2TrxmFIP6eHbK96Stuk2swNo9P.RWJpKPd8Y.tKIi', '0868608700', '245A/28 Ba Đình, Phường 8, Quận 8, Thành phố Hồ Chí Minh', 'GrZWwgdEQ9oc7bPuSZerELi4oZswddfdIkwgZt0vKE8eNwsqvt5jKwklsPmc', '2017-03-23 07:17:33', '2018-11-19 11:36:18'),
-(3, 'admin', 'admin', 'Có', '$2y$10$Q7RQNwCLOD0y2TrxmFIP6eHbK96Stuk2swNo9P.RWJpKPd8Y.tKIi', NULL, NULL, 'l4DfkTNfqG2q8FY0iHUo4KHMZAsIMfaykrr3YFgSTntYS1mhO9xFnzWAMI2N', '2018-11-17 18:21:18', '2018-11-17 18:21:18'),
+(3, 'admin', 'admin', 'Có', '$2y$10$Q7RQNwCLOD0y2TrxmFIP6eHbK96Stuk2swNo9P.RWJpKPd8Y.tKIi', NULL, NULL, 'wSUqqlH12C5LtvVuBvwRdDHCwAOYqX9jaWGk5BYFglbvDWEmReuQcI1ztmBY', '2018-11-17 18:21:18', '2018-11-17 18:21:18'),
 (4, 'Nguyễn Bim', 'bimcho@gmail.com', 'Không', '$2y$10$iGc.1Ey2IJnGj4Qp4Mgpee4jbh91vWgN8cEz3IuXWC/7ivc/M3bYm', '19001009', 'Ở chung với ba mẹ', NULL, '2018-11-17 18:21:49', '2018-11-19 11:36:40'),
 (6, 'hoang nhat', 'nhat@gmail.com', 'Không', '$2y$10$bl2lDu4FmOWDH2GakE/3puAf6mqzuE0S5MJn/oSZB7YSy90zVgbPO', '1231312312', '123 nguyen van cu', 'HtqnlP97K0iuLhnScyolVRDly1N2zkDmbGpic2Rm70OpuHCOFKGeaCZiUngJ', '2018-11-26 15:56:26', '2018-11-26 15:56:26'),
 (7, 'Nhat', 'vonhathoang10@gmail.com', 'Không', '$2y$10$2/YCBJBITeuU30c/86SSFOs8EJi8uA8Qq72yjjxybqbSyhXp.6lb2', '01912281', '12323', NULL, '2018-12-24 09:26:06', '2018-12-24 09:26:06'),
@@ -241,6 +258,12 @@ ALTER TABLE `slide`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `support`
+--
+ALTER TABLE `support`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `type_products`
 --
 ALTER TABLE `type_products`
@@ -261,19 +284,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bills`
 --
 ALTER TABLE `bills`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `bill_detail`
 --
 ALTER TABLE `bill_detail`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -286,6 +309,12 @@ ALTER TABLE `products`
 --
 ALTER TABLE `slide`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `support`
+--
+ALTER TABLE `support`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `type_products`

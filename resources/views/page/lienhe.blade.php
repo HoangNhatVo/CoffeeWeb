@@ -56,16 +56,16 @@
                             </div>
                         @endif
                         <div class="form-block">
-                            <input name="your-name" type="text" placeholder="Họ và tên*" autofocus="true" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
+                            <input name="your_name" type="text" placeholder="Họ và tên*" autofocus="true" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                         </div>
                         <div class="form-block">
-                            <input name="your-email" type="email" placeholder="Địa chỉ Email*" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
+                            <input name="your_email" type="email" placeholder="Địa chỉ Email*" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                         </div>
                         <div class="form-block">
-                            <input name="your-subject" type="text" placeholder="Tiêu đề" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
+                            <input name="your_subject" type="text" placeholder="Tiêu đề" style="border:1px solid #e1e1e1;height: 30px; border-radius: 4px;">
                         </div>
                         <div class="form-block">
-                            <textarea name="your-message" placeholder="Nội dung*" style="border-radius: 4px;"></textarea>
+                            <textarea name="your_message" placeholder="Nội dung*" style="border-radius: 4px;"></textarea>
                         </div>
                         <div class="form-block">
                             <button id="btn_stylenew" type="submit" class="beta-btn primary">Gửi hỗ trợ<i

@@ -11,7 +11,7 @@
                 </div>
                 </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-3">
                 <div class="widget">
                     <h4 class="widget-title">Information</h4>
                     <div>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="col-sm-10">
                     <div class="widget">
                         <h4 class="widget-title">Contact Us</h4>
@@ -44,11 +44,16 @@
             </div>
             <div class="col-sm-3">
                 <div class="widget">
-                    <h4 class="widget-title">Newsletter Subscribe</h4>
-                    <form action="#" method="post">
+                    <h4 class="widget-title">Support</h4>
+                    <div>
+                        <ul>
+                            <li><a href="{{route('lienhe')}}"><i class="fa fa-chevron-right"></i>  Go To Support Form</a></li>
+                        </ul>
+                    </div>
+                    <!-- <form action="#" method="post">
                         <input type="email" name="your_email">
                         <button class="pull-right" type="submit">Subscribe <i class="fa fa-chevron-right"></i></button>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </div> <!-- .row -->

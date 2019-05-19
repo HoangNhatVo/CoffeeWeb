@@ -56,6 +56,19 @@ Route::group(['prefix' => 'admin', 'middleware'=>'adminLogin'], function () {
             'uses' => 'DonHangController@getXoa']);
     });
 
+
+        //Route Suport customer
+    Route::group(['frefix' => 'hotro'], function(){
+        Route::get('danhsach', [
+            'as' => 'admin-dshotro',
+            'uses' => 'HoTroController@getHoTro'
+        ]);
+        Route::get('xoa/{id}',[
+            'as'=>'admin-guihotro',
+            'uses'=>'HoTroController@getXoa'
+        ]);
+    });
+
     Route::group(['prefix' => 'loaisanpham'], function () {
 
         Route::get('danhsach', [

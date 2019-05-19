@@ -128,7 +128,7 @@ class DonHangController extends Controller
         $bill->total = $tmp;
         
         $customer = Customer::where('id',$bill->id_customer)->first();
-        $billdetail->tinhtrang = 'Đã xuất đơn hàng';
+        $billdetail->status = 'Đã xuất đơn hàng';
         $billdetail->save();
         if($tmp == 0){
             $bill->note = 'Đã xuất đơn hàng';

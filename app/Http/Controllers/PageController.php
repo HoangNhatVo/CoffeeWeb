@@ -10,6 +10,7 @@ use App\Customer;
 use App\Bill;
 use App\BillDetail;
 use App\User;
+use App\Support;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -198,18 +199,23 @@ class PageController extends Controller
     public function postLienhe(Request $req){
          $this->validate($req,
             [
-                'your-name' => 'required',
-                'your-email' => 'required|email',
-                'your-message' => 'required'
+                'your_name' => 'required',
+                'your_email' => 'required|email',
+                'your_message' => 'required'
             ],
             [
-                'your-name.required' => 'Vui lòng nhập họ tên',
-                'your-email.required' => 'Vui lòng nhập Email',
-                'your-email.email' => 'Email không đúng định dạng',
-                'your-message.required' => 'Vui lòng nhập nội dung cần hỗ trợ'
+                'your_name.required' => 'Vui lòng nhập họ tên',
+                'your_email.required' => 'Vui lòng nhập Email',
+                'your_email.email' => 'Email không đúng định dạng',
+                'your_message.required' => 'Vui lòng nhập nội dung cần hỗ trợ'
             ]
         );
-
+        $support = new Support();
+        $support->full_name = $req->your_name;
+        $support->email = $req->your_email;
+        $support->title = $req->your_subject;
+        $support->content = $req->your_message;
+        $support->save();
         return redirect()->back()->with('thongbao','Hỗ trợ đã được gửi');
     }
 }
