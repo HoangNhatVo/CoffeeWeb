@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2019 at 10:02 AM
+-- Generation Time: May 19, 2019 at 11:10 AM
 -- Server version: 10.1.39-MariaDB
 -- PHP Version: 7.3.5
 
@@ -51,6 +51,7 @@ CREATE TABLE `bill_detail` (
   `id_product` int(10) NOT NULL,
   `quantity` int(11) NOT NULL COMMENT 'số lượng',
   `unit_price` double NOT NULL,
+  `tinhtrang` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -195,9 +196,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `full_name`, `email`, `isAdmin`, `password`, `phone`, `address`, `remember_token`, `created_at`, `updated_at`) VALUES
 (2, 'Nguyễn Anh Tuấn', 'ntuan.2502@gmail.com', 'Không', '$2y$10$Q7RQNwCLOD0y2TrxmFIP6eHbK96Stuk2swNo9P.RWJpKPd8Y.tKIi', '0868608700', '245A/28 Ba Đình, Phường 8, Quận 8, Thành phố Hồ Chí Minh', 'GrZWwgdEQ9oc7bPuSZerELi4oZswddfdIkwgZt0vKE8eNwsqvt5jKwklsPmc', '2017-03-23 07:17:33', '2018-11-19 11:36:18'),
-(3, 'admin', 'admin', 'Có', '$2y$10$Q7RQNwCLOD0y2TrxmFIP6eHbK96Stuk2swNo9P.RWJpKPd8Y.tKIi', NULL, NULL, 'XZqIfKwobGUzr8QG56lX5KfJBIioU7eD4LZNM9BbbXmsFI93i2BBxU4Weqao', '2018-11-17 18:21:18', '2018-11-17 18:21:18'),
+(3, 'admin', 'admin', 'Có', '$2y$10$Q7RQNwCLOD0y2TrxmFIP6eHbK96Stuk2swNo9P.RWJpKPd8Y.tKIi', NULL, NULL, 'l4DfkTNfqG2q8FY0iHUo4KHMZAsIMfaykrr3YFgSTntYS1mhO9xFnzWAMI2N', '2018-11-17 18:21:18', '2018-11-17 18:21:18'),
 (4, 'Nguyễn Bim', 'bimcho@gmail.com', 'Không', '$2y$10$iGc.1Ey2IJnGj4Qp4Mgpee4jbh91vWgN8cEz3IuXWC/7ivc/M3bYm', '19001009', 'Ở chung với ba mẹ', NULL, '2018-11-17 18:21:49', '2018-11-19 11:36:40'),
-(5, '1', 'cafequanly@gmail.com', 'Không', '$2y$10$LTMjfbvN1gLosXQPIcXpneBjpplm/acSQQdnOPPveVksc4YI8v7/C', '1', '1', 'lgogLssLL4faqL8RghZFg7UnoKRXUB9r9EY6TUZyiOXvaxLGUmG7OvEyUPva', '2018-11-18 14:32:58', '2018-11-19 11:36:47'),
 (6, 'hoang nhat', 'nhat@gmail.com', 'Không', '$2y$10$bl2lDu4FmOWDH2GakE/3puAf6mqzuE0S5MJn/oSZB7YSy90zVgbPO', '1231312312', '123 nguyen van cu', 'HtqnlP97K0iuLhnScyolVRDly1N2zkDmbGpic2Rm70OpuHCOFKGeaCZiUngJ', '2018-11-26 15:56:26', '2018-11-26 15:56:26'),
 (7, 'Nhat', 'vonhathoang10@gmail.com', 'Không', '$2y$10$2/YCBJBITeuU30c/86SSFOs8EJi8uA8Qq72yjjxybqbSyhXp.6lb2', '01912281', '12323', NULL, '2018-12-24 09:26:06', '2018-12-24 09:26:06'),
 (9, 'nhat', 'vannhat8198@gmail.com', 'Không', '$2y$10$pJiNvY6/MprLoIUREzXXuu45y0efg3MbKPEDLgXAFXrUH4G6iY0Sa', '0976827921', 'hue', NULL, '2019-05-17 08:32:48', '2019-05-17 08:32:48'),
@@ -261,19 +261,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bills`
 --
 ALTER TABLE `bills`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `bill_detail`
 --
 ALTER TABLE `bill_detail`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `products`

@@ -126,13 +126,16 @@ class DonHangController extends Controller
         $bill = Bill::where('id',$billdetail->id_bill)->first();
         $tmp = $bill->total - ($billdetail->quantity*$billdetail->unit_price);
         $bill->total = $tmp;
-        $bill->save();
+        
         $customer = Customer::where('id',$bill->id_customer)->first();
-        $billdetail->delete();
+        $billdetail->tinhtrang = 'Đã xuất đơn hàng';
+        $billdetail->save();
         if($tmp == 0){
-            $bill->delete();
-            $customer->delete();
+            $bill->note = 'Đã xuất đơn hàng';
+            $customer->note = 'Đã xuất đơn hàng';
+            $customer->save();
         }
+        $bill->save();
         return redirect()->back()->with('thongbao', 'Xuất đơn hàng thành công');
     }
 }

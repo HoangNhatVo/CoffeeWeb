@@ -49,11 +49,12 @@
                     </thead>
                     <tbody>
                         @foreach($billdetail as $bd)
+                        @if($bd->tinhtrang != 'Đã xuất đơn hàng')
                         <tr class="odd gradeX">
                             @foreach($bill as $b)
-                                @if($bd->id_bill == $b->id)
+                                @if($bd->id_bill == $b->id && $bd->tinhtrang != 'Đã xuất đơn hàng')
                                     @foreach($customer as $c)
-                                        @if($b->id_customer == $c->id)
+                                        @if($b->id_customer == $c->id && $b->note != 'Đã xuất đơn hàng')
                                         <td>{{$c->name}}</td>
                                         <td>{{$c->email}}</td>
                                         <td class="center">{{$c->phone_number}}</td>
@@ -75,6 +76,7 @@
                                 
                             @endforeach
                         </tr>
+                        @endif
                         @endforeach
 
 
