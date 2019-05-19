@@ -18,16 +18,16 @@
             </a>
             <ul class="dropdown-menu dropdown-user">
                 <li>
-                    <a style="color: #881a1a;" href={{route('admin-dsuser')}}>
+                    <a style="color: #881a1a;" href={{route('admin-dashboard')}}>
                         <i class="fa fa-user fa-fw"></i>
-                        Thông tin Admin
+                        Xin chào Admin
                     </a>
                 </li>
-                <li><a style="color: #881a1a;" href="#">
+                <!-- <li><a style="color: #881a1a;" href="{{route('admin-dashboard')}}">
                         <i class="fa fa-gear fa-fw"></i>
                         Cập nhật thông tin
                     </a>
-                </li>
+                </li> -->
                 <li class="divider"></li>
                 <li>
                     <a style="color: #881a1a;" href={{route('admin-logout')}}>
