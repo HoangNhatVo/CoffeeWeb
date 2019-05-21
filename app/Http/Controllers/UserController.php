@@ -83,7 +83,7 @@ class UserController extends Controller
         $user->full_name = $req->full_name;
         $user->phone = $req->phone;
         $user->address = $req->address;
-        $user->isAdmin = $req->isAdmin;
+        // $user->isAdmin = $req->isAdmin;
         if ($req->changePassword == "on") {
             $user->password = Hash::make($req->password);
         }
@@ -97,5 +97,11 @@ class UserController extends Controller
         $user->delete();
 
         return redirect()->back()->with('thongbao', 'Xoá thành công');
+    }
+
+    public function getXemthongtin($id)
+    {
+        $user = User::find($id);
+        return view('admin.user.xemthongtin', compact('user'));
     }
 }

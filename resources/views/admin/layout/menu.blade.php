@@ -18,9 +18,11 @@
                 <a style="color: #881a1a;" href={{route('admin-dsdonhang')}}><i class="fa fa-cube fa-fw"></i> Đơn hàng<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a style="color: #881a1a;" href={{route('admin-dsdonhang')}}>Danh sách</a>
+                        <a style="color: #881a1a;" href={{route('admin-dsdonhang')}}>Danh sách đang chờ</a>
                     </li>
-                    
+                    <li>
+                        <a style="color: #881a1a;" href={{route('admin-dsdonhangdalam')}}>Danh sách đã làm</a>
+                    </li>
                 </ul> <!-- /.nav-second-level -->
             </li>
             <li>
@@ -62,7 +64,7 @@
                 <a style="color: #881a1a;" href="#"><i class="fa fa-headphones"></i> Hỗ trợ khách hàng<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a style="color: #881a1a;" href="{{route('admin-dshotro')}}">Danh sách</a>
+                        <a style="color: #881a1a;" href="{{route('admin-dshotro')}}">Danh sách thắc mắc</a>
                     </li>
                     
                 </ul>

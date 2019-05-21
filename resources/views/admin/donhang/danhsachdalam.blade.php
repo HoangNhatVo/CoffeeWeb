@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 style="color: #881a1a;" class="page-header">Đơn hàng
-                        <small>Đang chờ</small>
+                        <small>Đã làm</small>
                     </h1>
                     @if(session('thongbao'))
                         <div class="alert alert-success"style="font-weight: bold;">
@@ -25,37 +25,26 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                     <tr align="center">
-                        <th class="center" width="30px">ID Khách</th>
+                        <th class="center" width="20px">ID Khách</th>
                         <th class="center" width="70px">Tên khách hàng</th>                        
                         <th class="center" width="50px">Email</th>
                         <th class="center" width="30px">SĐT</th>
                         <th class="center" width="60px">Tên sản phẩm</th>
                         <th class="center" width="40px">Số lượng</th>
                         <th class="center" width="50px">Đơn giá 1 sản phẩm</th>
-                        <th class="center" width="40px">Thời gian đặt</th>
-                        <th class="center" width="60px">Xuất đơn hàng</th>
+                        <th class="center" width="40px">Thời gian làm</th>
+                        <!-- <th class="center" width="60px">Xuất đơn hàng</th> -->
 
-                        <!-- <th class="center" width="50px">ID</th>
-                        <th class="center" width="150px">Name</th>
-                        <th class="center" width="150px">Gender</th>
-                        <th class="center" width="0px">Email</th>
-                        <th class="center" width="500px">Address</th>
-                        <th class="center" width="100px">Phone</th>
-                        <th class="center" width="100px">Note</th>
-                        <th class="center" width="150px">Created</th>
-                        <th class="center" width="150px">Updated</th> -->
-                        <!-- <th class="center" width="50px">Xoá</th> -->
-                        <!-- <th class="center" width="50px">Sửa</th> -->
                     </tr>
                     </thead>
                     <tbody>
                         @foreach($billdetail as $bd)
-                        @if($bd->status != 'Đã xuất đơn hàng')
+                        @if($bd->status == 'Đã xuất đơn hàng')
                         <tr class="odd gradeX">
                             @foreach($bill as $b)
-                                @if($bd->id_bill == $b->id && $bd->status != 'Đã xuất đơn hàng')
+                                @if($bd->id_bill == $b->id)
                                     @foreach($customer as $c)
-                                        @if($b->id_customer == $c->id && $b->note != 'Đã xuất đơn hàng')
+                                        @if($b->id_customer == $c->id)
                                         <td class="center">{{$c->id}}</td>
                                         <td>{{$c->name}}</td>
                                         <td>{{$c->email}}</td>
@@ -72,7 +61,7 @@
                                     <td class="center">{{$bd->quantity}}</td>
                                     <td class="center">{{number_format($bd->unit_price)}} đồng</td>
                                     <td class="center">{{$bd->created_at}}</td>
-                                    <td class="center"><i class="fa fa-trash-o fa-fw"></i><a style="text-decoration: none;" href="{{route('admin-xoadonhang',$bd->id)}}"> Xuất</a></td>
+                                    <!-- <td class="center"><i class="fa fa-trash-o fa-fw"></i><a style="text-decoration: none;" href="{{route('admin-xoadonhang',$bd->id)}}"> Xuất</a></td> -->
 
                                 @endif
                                 
@@ -80,25 +69,6 @@
                         </tr>
                         @endif
                         @endforeach
-
-
-                    <!-- @foreach($customer as $us)
-                        <tr class="odd gradeX">
-                            <td class="center">{{$us->id}}</td>
-                            <td>{{$us->name}}</td>
-                            <td>{{$us->gender}}</td>
-                            <td>{{$us->email}}</td>
-                            <td>{{$us->address}}</td>
-                            <td>{{$us->phone_number}}</td>
-                            <td>{{$us->note}}</td>
-                            <td class="center">{{$us->created_at}}</td>
-                            <td class="center">{{$us->updated_at}}</td>
-                            <!-- <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a -->
-                                        <!-- href={{route('admin-xoauser',$us->id)}}>Xoá</a></td> -->
-                            <!-- <td class="center"><i class="fa fa-pencil fa-fw"></i> <a -->
-                                        <!-- href={{route('admin-suauser',$us->id)}}>Sửa</a></td> -->
-                        <!-- </tr> -->
-                    <!-- @endforeach -->
                 </table>
             </div>
             <!-- /.row -->

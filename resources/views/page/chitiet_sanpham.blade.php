@@ -84,7 +84,7 @@
                                         @endif
                                         <div class="single-item-header">
                                             <a href={{route('chitietsanpham',$sptt->id)}}><img
-                                                        src="upload/product/{{$sptt->image}}"
+                                                        src="upload/product/{{$sptt->image}}" title = "{{$sptt->name}}"
                                                         alt="" height="250px"></a>
                                         </div>
                                         <div class="single-item-body">
@@ -122,7 +122,7 @@
                                 @foreach($sp_km as $spkm)
                                     <div class="media beta-sales-item">
                                         <a class="pull-left" href={{route('chitietsanpham',$spkm->id)}}>
-                                            <img src="upload/product/{{$spkm->image}}" alt="">
+                                            <img src="upload/product/{{$spkm->image}}" title = "{{$spkm->name}}" alt="">
                                         </a>
                                         <div class="media-body"  style="font-size: 15px">{{$spkm->name}}</div>
                                         @if($spkm->promotion_price==0)
@@ -146,7 +146,7 @@
                                 @foreach($sp_moi as $spm)
                                     <div class="media beta-sales-item">
                                         <a class="pull-left" href={{route('chitietsanpham',$spm->id)}}>
-                                            <img src="upload/product/{{$spm->image}}" alt="">
+                                            <img src="upload/product/{{$spm->image}}" title = "{{$spm->name}}" alt="">
                                         </a>
                                         <div class="media-body" style="font-size: 15px">{{$spm->name}}</div>
                                         @if($spm->promotion_price==0)

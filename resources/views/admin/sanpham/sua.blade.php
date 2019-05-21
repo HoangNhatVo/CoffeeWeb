@@ -52,7 +52,7 @@
                             <input type="number" class="form-control" name="unit_price" value="{{$sanpham->unit_price}}" placeholder="Nhập giá gốc"/>
                         </div>
                         <div class="form-group">
-                            <label>Giá KM</label>
+                            <label>Giá khuyến mãi</label>
                             <input type="number" class="form-control" name="promotion_price" value="{{$sanpham->promotion_price}}" placeholder="Nhập giá KM"/>
                         </div>
                         <div class="form-group">
@@ -70,7 +70,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>SP mới</label>
+                            <label>Sản phẩm mới/cũ</label>
                             <select class="form-control" name="new">
                                 <option value="{{$sanpham->new}}">Hiện tại: {{$sanpham->new}}</option>
                                 <option value="mới">Mới</option>

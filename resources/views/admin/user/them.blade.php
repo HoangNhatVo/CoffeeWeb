@@ -1,14 +1,14 @@
 @extends('admin.layout.index')
 @section('content')
 
-    <title>Thêm sản phẩm</title>
+    <title>Thêm Admin</title>
 
     <!-- Page Content -->
     <div id="page-wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 style="color: #881a1a;" class="page-header">Người dùng
+                    <h1 style="color: #881a1a;" class="page-header">Admin
                         <small>Thêm</small>
                     </h1>
                 </div>
@@ -61,7 +61,7 @@
                                 <option value="Có" selected="selected">Có</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-default" id="btn_style_admin">Thêm người dùng</button>
+                        <button type="submit" class="btn btn-default" id="btn_style_admin">Thêm Admin</button>
                         <!-- <button type="reset" class="btn btn-default" id="btn_style_admin">Reset</button> -->
                         <a class="btn btn-default" id="btn_style_admin" href="{{route('admin-dsuser')}}">Trở về</a>
                     </form>

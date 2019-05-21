@@ -7,27 +7,31 @@
             <span class="icon-bar"></span>
         </button>
         <!-- <a class="navbar-brand" href="{{route('admin-dashboard')}}" style="color: #881a1a;; font-weight: bold; margin-left: 100px;">Admin Panel</a> -->
-        <a href="{{route('admin-dashboard')}}" style="margin-left: 20px;"><img src="website-assets/assets/dest/images/logo-cake.png" width="50px;"></a>
+        <a href="{{route('admin-dashboard')}}" style="margin-left: 20px;"><img src="website-assets/assets/dest/images/logo-cake.png" width="50px;" title="NoName Coffee"></a>
         <a id="admin-panel" href="{{route('admin-dashboard')}}">Admin Panel</a>
     </div> <!-- /.navbar-header -->
 
     <ul class="nav navbar-top-links navbar-right"> <!-- /.dropdown -->
         <li class="dropdown">
             <a id="dropdown-toggle" class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #881a1a;">
-                <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                @if(Auth::check())
+                <img src="website-assets/assets/dest/images/avatar_thumb.jpg" style="border-radius: 50%;" width="18px" height="18px">
+                <span style="font-size: 12px; font-weight: bold;padding-left: 5px;">{{Auth::user()->full_name}}</span>
+                @endif
+                  <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
                 <li>
-                    <a style="color: #881a1a;" href={{route('admin-dashboard')}}>
+                    <a style="color: #881a1a;" href={{route('admin-thongtinchitiet',Auth::user()->id)}}>
                         <i class="fa fa-user fa-fw"></i>
-                        Xin chào Admin
+                        Thông tin cá nhân
                     </a>
                 </li>
-                <!-- <li><a style="color: #881a1a;" href="{{route('admin-dashboard')}}">
+                <li><a style="color: #881a1a;" href="{{route('admin-suauser',Auth::user()->id)}}">
                         <i class="fa fa-gear fa-fw"></i>
                         Cập nhật thông tin
                     </a>
-                </li> -->
+                </li>
                 <li class="divider"></li>
                 <li>
                     <a style="color: #881a1a;" href={{route('admin-logout')}}>

@@ -36,6 +36,10 @@ Route::group(['prefix' => 'admin', 'middleware'=>'adminLogin'], function () {
         Route::get('danhsach', [
             'as' => 'admin-dsdonhang',
             'uses' => 'DonHangController@getDanhSach']);
+        Route::get('danhsachdalam',[
+            'as'=>'admin-dsdonhangdalam',
+            'uses'=>'DonHangController@getDanhSachDaLam'
+        ]);
 
         // Route::get('them', [
         //     'as' => 'admin-themdonhang',
@@ -142,6 +146,10 @@ Route::group(['prefix' => 'admin', 'middleware'=>'adminLogin'], function () {
         Route::get('xoa/{id}', [
             'as' => 'admin-xoauser',
             'uses' => 'UserController@getXoa']);
+        Route::get('xemthongtin/{id}',[
+            'as'=>'admin-thongtinchitiet',
+            'uses'=>'UserController@getXemthongtin'
+        ]);
     });
 });
 

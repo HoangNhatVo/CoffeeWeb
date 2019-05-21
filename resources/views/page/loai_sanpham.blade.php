@@ -47,7 +47,7 @@
                                     @endif
                                     <div class="single-item-header">
                                         <a href="{{route('chitietsanpham',$sp->id)}}"><img
-                                            src="upload/product/{{$sp->image}}" alt=""
+                                            src="upload/product/{{$sp->image}}" title="{{$sp->name}}" alt=""
                                             height="250px"></a>
                                         </div>
                                         <div class="single-item-body">
@@ -95,7 +95,7 @@
                                             @endif
                                             <div class="single-item-header">
                                                 <a href={{route('chitietsanpham',$sp_k->id)}}><img
-                                                    src="upload/product/{{$sp_k->image}}"
+                                                    src="upload/product/{{$sp_k->image}}" title="{{$sp_k->name}}"
                                                     alt="" height="250px"></a>
                                                 </div>
                                                 <div class="single-item-body">

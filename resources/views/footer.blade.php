@@ -61,7 +61,7 @@
 </div> <!-- #footer -->
 <div class="copyright">
     <div class="container">
-        <p style="text-align: center;">© Copyright 2018 Noname, All rights reserved</p>
+        <p style="text-align: center;">© Copyright 2019 Noname, All rights reserved</p>
         <div class="clearfix"></div>
     </div> <!-- .container -->
 </div> <!-- .copyright -->

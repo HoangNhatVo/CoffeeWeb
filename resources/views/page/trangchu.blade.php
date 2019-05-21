@@ -60,7 +60,7 @@ Chỉ cần cafe ngon</p>
                                     @endif
                                     <div class="single-item-header">
                                         <a href="{{route('chitietsanpham',$spm->id)}}"><img
-                                            src="upload/product/{{$spm->image}}" alt=""
+                                            src="upload/product/{{$spm->image}}" title = "{{$spm->name}}" alt=""
                                             height="250px"></a>
                                         </div>
                                         <div class="single-item-body">
@@ -112,7 +112,7 @@ Chỉ cần cafe ngon</p>
                                             @endif
                                             <div class="single-item-header">
                                                 <a href="{{route('chitietsanpham',$spkm->id)}}"><img
-                                                    src="upload/product/{{$spkm->image}}" alt=""
+                                                    src="upload/product/{{$spkm->image}}" title = "{{$spkm->name}}" alt=""
                                                     height="250px"></a>
                                                 </div>
                                                 <div class="single-item-body">
