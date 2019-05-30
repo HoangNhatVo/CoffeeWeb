@@ -17,12 +17,6 @@
                     <div>
                         <ul>
                             <li><a href="{{route('gioithieu')}}"><i class="fa fa-chevron-right"></i>  Team Developer</a></li>
-                            <!-- <li><a href="#"><i class="fa fa-chevron-right"></i> Web Design</a></li>
-                            <li><a href="#"><i class="fa fa-chevron-right"></i> Web development</a></li>
-                            <li><a href="#"><i class="fa fa-chevron-right"></i> Marketing</a></li>
-                            <li><a href="#"><i class="fa fa-chevron-right"></i> Tips</a></li>
-                            <li><a href="#"><i class="fa fa-chevron-right"></i> Resources</a></li>
-                            <li><a href="#"><i class="fa fa-chevron-right"></i> Illustrations</a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -32,12 +26,10 @@
                     <div class="widget">
                         <h4 class="widget-title">Contact Us</h4>
                         <div>
-                            <div class="contact-info">
-                                <i class="fa fa-map-marker"></i>
-                                <p><a href="https://goo.gl/maps/gH6UBrJz1q32">227 Nguyễn Văn Cừ, P4, Q5, TPHCM</a></p>
-                                <p>Hotline: 0123 123 123</p>
-                                <p><a href="mailto:Nonamelegendary@gmail.com">Nonamelegendary@gmail.com</a></p>
-                            </div>
+                            <ul>
+                            <li><a href="https://goo.gl/maps/gH6UBrJz1q32"><i class="fa fa-chevron-right"></i> 227 Nguyễn Văn Cừ, P4, Q5, TP HCM</a></li>
+                            <li><a href="mailto:Nonamelegendary@gmail.com"><i class="fa fa-chevron-right"></i>NoName@gmail.com</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -50,10 +42,6 @@
                             <li><a href="{{route('lienhe')}}"><i class="fa fa-chevron-right"></i>  Go To Support Form</a></li>
                         </ul>
                     </div>
-                    <!-- <form action="#" method="post">
-                        <input type="email" name="your_email">
-                        <button class="pull-right" type="submit">Subscribe <i class="fa fa-chevron-right"></i></button>
-                    </form> -->
                 </div>
             </div>
         </div> <!-- .row -->

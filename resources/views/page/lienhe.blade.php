@@ -34,12 +34,6 @@
                     <div class="space20">&nbsp;</div>
                     <form action="{{route('lienhe')}}" method="post" class="contact-form">
                          <input type="hidden" name="_token" value="{{csrf_token()}}">
-                         <!-- @if(session('thongbao'))
-                            <div class="alert alert-success" style="font-weight: bold;">
-                                <i class="fa fa-check"></i>
-                                {{Session::get('thongbao')}}
-                            </div>
-                        @endif -->
                         @if(count($errors)>0)
                             <div class="alert alert-danger" style="font-weight: bold;">
                                 @foreach($errors->all() as $err)
@@ -76,30 +70,11 @@
                 <div class="col-sm-4">
                     <h2>Thông tin liên hệ</h2>
                     <div class="space20">&nbsp;</div>
-
-                    <h6 class="contact-title">Địa chỉ</h6>
-                    <div class="space5">&nbsp;</div>
-                    <p>
-                        Số 227, đường Nguyễn Văn Cừ<br>
-                        <div class="space5">&nbsp;</div>
-                        Phường 4, Quận 5<br>
-                        <div class="space5">&nbsp;</div>
-                        Thành phố Hồ Chí Minh
-                    </p>
+                    <div style="font-size: 1.2em;"><i class="fa fa-map-marker"></i> 227 Nguyễn Văn Cừ, P4, Q5, TP. HCM</div>
                     <div class="space20">&nbsp;</div>
-                    <h6 class="contact-title">Mọi thắc mắc xin gửi về</h6>
-                    <div class="space5">&nbsp;</div>
-                    <p>
-                        Số 227, đường Nguyễn Văn Cừ<br>
-                        <div class="space5">&nbsp;</div>
-                        Phường 4, Quận 5, Thành phố Hồ Chí Minh<br>
-                        <div class="space5">&nbsp;</div>
-                        <a href="mailto:Nonamelegendary@gmail.com">Nonamelegendary@gmail.com</a>
-                    </p>
+                    <div style="font-size: 1.2em;"><i class="fa fa-phone"></i> 0123 123 321</div>
                     <div class="space20">&nbsp;</div>
-                    <h6 class="contact-title"></h6>
-                    <p>
-                    </p>
+                    <div style="font-size: 1.2em;"><i class="fa fa-envelope"></i> NoName@gmail.com</div>
                 </div>
             </div>
         </div> <!-- #content -->

@@ -65,8 +65,7 @@ class UserController extends Controller
     public function postSua(Request $req, $id)
     {
         $user = User::find($id);
-
-        /*
+        
         $this->validate($req,
             [
                 'full_name' => 'required',
@@ -77,8 +76,7 @@ class UserController extends Controller
                 'full_name.required' => 'Họ và tên không được để trống',
                 'phone.required' => 'Số điện thoại không được để trống',
                 'address.required' => 'Địa chỉ không được để trống',
-            ]);
-        */
+            ]);        
 
         $user->full_name = $req->full_name;
         $user->phone = $req->phone;

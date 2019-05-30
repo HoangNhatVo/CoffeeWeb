@@ -70,8 +70,7 @@
                             <label for="phone">Nhập lại mật khẩu*</label>
                             <input style="border:1px solid #e1e1e1;height: 37px; border-radius: 4px;"  type="password" name="re_password" required>
                         </div>
-                        <div class="form-block">
-                            <!-- <button style="background-color: #881a1a;border:none; " type="submit" class="btn btn-primary">Đăng ký</button> -->
+                        <div class="form-block">                            
                             <button id="btn_stylenew" type="submit" class="btn btn-primary">Đăng ký
                             </button>
                         </div>

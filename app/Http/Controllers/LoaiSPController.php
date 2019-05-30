@@ -28,7 +28,7 @@ class LoaiSPController extends Controller
             ],
             [
                 'name.required' => 'Bạn chưa nhập tên loại sản phẩm',
-                'name.unique' => 'Tên sản phẩm đã trùng',
+                'name.unique' => 'Tên loại sản phẩm đã trùng',
                 'name.min' => 'Tên loại sản phẩm phải có độ dài từ 3 đến 100 ký tự',
                 'name.max' => 'Tên loại sản phẩm phải có độ dài từ 3 đến 100 ký tự',
                 'description.required' => 'Bạn chưa nhập mô tả'
@@ -58,7 +58,7 @@ class LoaiSPController extends Controller
             ],
             [
                 'name.required' => 'Bạn chưa nhập tên loại sản phẩm',
-                'name.unique' => 'Tên sản phẩm đã trùng',
+                'name.unique' => 'Tên loại sản phẩm đã trùng',
                 'name.min' => 'Tên loại sản phẩm phải có độ dài từ 3 đến 100 ký tự',
                 'name.max' => 'Tên loại sản phẩm phải có độ dài từ 3 đến 100 ký tự',
                 'description.required' => 'Bạn chưa nhập mô tả'

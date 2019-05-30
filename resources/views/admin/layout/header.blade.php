@@ -6,7 +6,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <!-- <a class="navbar-brand" href="{{route('admin-dashboard')}}" style="color: #881a1a;; font-weight: bold; margin-left: 100px;">Admin Panel</a> -->
         <a href="{{route('admin-dashboard')}}" style="margin-left: 20px;"><img src="website-assets/assets/dest/images/logo-cake.png" width="50px;" title="NoName Coffee"></a>
         <a id="admin-panel" href="{{route('admin-dashboard')}}">Admin Panel</a>
     </div> <!-- /.navbar-header -->

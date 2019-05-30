@@ -39,8 +39,7 @@
                             <label for="phone">Mật khẩu</label>
                             <input style="height: 34px; border:1px solid #e1e1e1; border-radius: 4px;" type="password" name="password" required>
                         </div>
-                        <div class="form-block">
-                            <!-- <button type="submit" class="btn btn-primary" style="background-color: #881a1a;border:none">Đăng nhập</button> -->
+                        <div class="form-block">                            
                             <button id="btn_stylenew" type="submit" class="btn btn-primary">Đăng nhập
                             </button>
                         </div>

@@ -33,8 +33,6 @@
                         <th class="center" width="40px">Số lượng</th>
                         <th class="center" width="50px">Đơn giá 1 sản phẩm</th>
                         <th class="center" width="40px">Thời gian làm</th>
-                        <!-- <th class="center" width="60px">Xuất đơn hàng</th> -->
-
                     </tr>
                     </thead>
                     <tbody>
@@ -61,8 +59,7 @@
                                     <td class="center">{{$bd->quantity}}</td>
                                     <td class="center">{{number_format($bd->unit_price)}} đồng</td>
                                     <td class="center">{{$bd->created_at}}</td>
-                                    <!-- <td class="center"><i class="fa fa-trash-o fa-fw"></i><a style="text-decoration: none;" href="{{route('admin-xoadonhang',$bd->id)}}"> Xuất</a></td> -->
-
+                                    
                                 @endif
                                 
                             @endforeach

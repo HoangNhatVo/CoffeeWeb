@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2019 at 01:10 PM
--- Server version: 10.1.39-MariaDB
+-- Generation Time: May 30, 2019 at 05:11 PM
+-- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -39,6 +39,14 @@ CREATE TABLE `bills` (
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `bills`
+--
+
+INSERT INTO `bills` (`id`, `id_customer`, `date_order`, `total`, `payment`, `note`, `created_at`, `updated_at`) VALUES
+(55, 57, '2019-05-30', 20000, NULL, NULL, '2019-05-30 15:01:56', '2019-05-30 15:01:56'),
+(56, 58, '2019-05-30', 20000, NULL, NULL, '2019-05-30 15:01:34', '2019-05-30 15:01:34');
+
 -- --------------------------------------------------------
 
 --
@@ -55,6 +63,16 @@ CREATE TABLE `bill_detail` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `bill_detail`
+--
+
+INSERT INTO `bill_detail` (`id`, `id_bill`, `id_product`, `quantity`, `unit_price`, `status`, `created_at`, `updated_at`) VALUES
+(84, 55, 108, 1, 20000, NULL, '2019-05-30 15:00:45', '2019-05-30 15:00:45'),
+(85, 55, 111, 1, 25000, 'Đã xuất đơn hàng', '2019-05-30 15:01:56', '2019-05-30 15:01:56'),
+(86, 56, 112, 1, 20000, NULL, '2019-05-30 15:01:27', '2019-05-30 15:01:27'),
+(87, 56, 109, 1, 25000, 'Đã xuất đơn hàng', '2019-05-30 15:01:34', '2019-05-30 15:01:34');
 
 -- --------------------------------------------------------
 
@@ -73,6 +91,14 @@ CREATE TABLE `customer` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id`, `name`, `gender`, `email`, `address`, `phone_number`, `note`, `created_at`, `updated_at`) VALUES
+(57, 'Nhật Võ', 'nam', 'nhatvo@gmail.com', 'Hồ Chí Minh', '0986765362', NULL, '2019-05-30 15:00:45', '2019-05-30 15:00:45'),
+(58, 'Văn Nhật', 'nam', 'vannhat@gmail.com', 'Hồ Chí Minh', '0936735323', NULL, '2019-05-30 15:01:27', '2019-05-30 15:01:27');
 
 -- --------------------------------------------------------
 
@@ -99,12 +125,6 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `id_type`, `description`, `unit_price`, `promotion_price`, `image`, `unit`, `new`, `created_at`, `updated_at`) VALUES
-(76, 'Cheese cake', 13, 'Bánh Cheesecake là một loại bánh phô mai rất nổi tiếng tại nhiều quốc gia trên thế giới. Hòa theo sự phát triển của bánh kết hợp văn hóa mỗi nước mà Cheesecake có nhiều biến tấu khác nhau. Một số quốc gia có Cheesecake rất ngon có thể kể tên như Hy Lạp, Ý, Anh, Đức, Pháp, Bỉ, Mỹ và Nhật Bản.  Vị béo của bánh kết hợp độ mềm mịn đã giúp cho loại bánh này có mặt trong rất nhiều tiệm bánh lớn nhỏ. Tại Việt Nam, Cheesecake cũng là một trong những loại bánh được rất nhiều người, đặc biệt là giới trẻ yêu thích.', 30000, 25000, 'tải xuống (3).jpg', 'cái', 'mới', '2018-12-26 14:38:19', '2019-05-19 07:11:45'),
-(80, 'Panettone cake', 13, 'Panettone được làm từ bột mì nguyên cám cùng nho khô, vỏ cam, được ngâm với hỗn hợp rượu từ Pháp, điểm xuyết với thảo mộc và các loại quả phương Đông. Hỗn hợp trái cây này được chuẩn bị trước 2 ngày để có thể thấm thật đều mùi hương nồng ấm.', 20000, 14998, 'tải xuống (7).jpg', 'cái', 'cũ', '2018-12-26 14:44:50', '2019-05-19 07:25:09'),
-(81, 'Crepe cake', 13, 'Bánh crepe được xem như là một loại “pancake của nước Pháp” với vị thơm thơm, ngậy ngậy hòa quyện cùng các loại nhân: kem, chocolate hay hạnh nhân… Một bữa ăn nhẹ với chiếc bánh crepe nóng hổi kèm một tách café bốc khói hay một ly rượu táo say nồng luôn khiến cho người ta ngất ngây và cảm thấy như được trở về tuổi thơ của cậu bé Remy trong tác phẩm nổi tiếng “Không gia đình” của Hector Malot.', 30000, NULL, 'tải xuống (8).jpg', 'cái', 'mới', '2018-12-26 14:45:32', '2019-05-19 07:27:51'),
-(83, 'Trà sữa truyền thống', 14, 'Trà sữa truyền thống cực kỳ phổ biến trên thị trường thức uống giải khát. Nó phù hợp với khẩu vị của nhiều đối tượng: học sinh, trẻ em, người lớn, người già… Điểm cộng lớn nhất cho thức uống này là vị đắng, chan chát và ngọt hậu hòa quyện với hương thơm ngậy mà không béo của sữa. Nhâm nhi từng ngụm nước độc đáo này, ta như được bay bổng vào thế giới của thiên nhiên, quên đi mệt mỏi, cái nắng hè oi ả bên ngoài.', 20000, 15000, 'tải xuống (10).jpg', 'ly', 'cũ', '2018-12-26 14:47:57', '2019-05-19 07:31:24'),
-(84, 'Trà sữa trân châu', 14, 'Trà sữa trân châu đang là món ăn ngon hot trend trên thị trường, vị béo ngậy của sữa tươi thanh trùng, vị dai dai ngọt ngọt của trân châu đường nâu - loại topping gây sốt sẽ khiến bạn uống mãi không dừng.', 30000, 25000, 'images (2).jpg', 'ly', 'mới', '2018-12-26 14:48:37', '2019-05-19 07:34:34'),
-(89, 'Coca cola', 15, 'Nước ngọt Coca Cola  giúp bạn xua tan mọi cảm giác mệt mỏi, căng thẳng, đem lại cảm giác thoải mái sau mỗi lần sử dụng.', 15000, NULL, 'images (5).jpg', 'cái', 'cũ', '2018-12-26 14:55:29', '2019-05-18 16:45:59'),
 (94, 'RedBull', 15, 'Một trong các loại đồ uống tăng lực hiệu quả trong các buổi học, ban ngày làm việc căng thẳng và cả đêm khuya, hàng đầu trên thị trường.\r\nĐóng gói: Lon 250ml.\r\nNhà sản xuất: Thai Corp International Vietnam Co.Ltd.', 15000, 12000, '5_redbull.jpg', 'phần', 'cũ', '2019-05-18 16:28:53', '2019-05-18 16:28:53'),
 (95, '7-Up', 15, 'Nước giải khát 7up là nước giải khát có ga với hương vị chanh tự nhiên mang lại cảm giác sảng khoái cho người dùng khi uống. Đặc biệt là vào mùa hè thì uống nước lạnh 7up thì thật tuyệt vời.\r\nHãng sản xuất	: Pepsico', 15000, NULL, '7_up.jpg', 'phần', 'cũ', '2019-05-18 16:33:45', '2019-05-18 16:33:45'),
 (96, 'Fanta', 15, 'Nước ngọt Fanta hương cam là thức uống giải khát rất được ưa chuộng trên toàn thế giới. Fanta hương cam mang đến cảm giác tươi mới, sảng khoái bất tận với hương cam dịu ngọt. Fanta là một sản phẩm của thương hiệu nước giải khát hàng đầu Coca-Cola, hoàn toàn không sử dụng chất bảo quản và hóa chất độc hại, mang đến cảm giác yên tâm cho người sử dụng.', 15000, NULL, 'fanta.jpg', 'phần', 'cũ', '2019-05-18 16:36:50', '2019-05-18 16:36:50'),
@@ -123,7 +143,12 @@ INSERT INTO `products` (`id`, `name`, `id_type`, `description`, `unit_price`, `p
 (110, 'Trà sữa kem Cheese', 14, 'Trà Sữa Kem Cheese ngon có phô mai mặn mặn, kèm hương trà thơm phức kết hợp sữa tươi béo béo khiến ai cũng sẽ mê mẩn.', 30000, NULL, 'hong-tra-kem-cheese.jpg', 'ly', 'cũ', '2019-05-18 17:45:41', '2019-05-18 17:45:41'),
 (111, 'Trà sữa trà xanh', 14, 'Vị béo và đắng dịu cùng vị ngọt của ly Trà sữa trà xanh sẽ đánh thức vị giác của bạn, khơi dậy cảm giác mát lạnh, thư giản và sản khoái cùng hương thơm trà xanh thoang thoảng.', 30000, 25000, 'trà-sữa-trà-xanh.jpg', 'ly', 'mới', '2019-05-18 17:48:32', '2019-05-18 17:48:32'),
 (112, 'Trà sữa khoai môn', 14, 'Trà sữa khoai môn có vị béo béo, bùi bùi lạ miệng. Hơn nữa, màu trà sữa là màu tím khoai môn mát mắt, ai nhìn cũng muốn uống ngay. Đã từng là món “best – seller” tại các quán trà sữa Bobapop, Gongcha,… cho đến nay được sáng tạo thêm như trà sữa khoai môn đậu đỏ, trà sữa khoai môn tươi,…Còn chần chờ gì nữa hãy khám phá món trà sữa khoai môn ngay nhé.', 25000, 20000, 'tskhoaimon.jpg', 'hộp', 'mới', '2019-05-18 17:55:04', '2019-05-18 17:55:04'),
-(113, 'Sting', 15, 'Nước tăng lực Sting là một sản phẩm của Pepsico được các bạn trẻ rất yêu thích. Sting dâu tây đỏ là sự kết hợp đột phá giữa nước tăng lực và hương dâu tây tự nhiên cho mùi thơm dịu ngọt, hương dâu đậm đà cùng vị gas nhẹ mang lại cảm giác sảng khoái và thú vị cho người uống.', 15000, NULL, 'sting.jpg', 'phần', 'cũ', '2019-05-18 17:57:24', '2019-05-18 17:57:24');
+(113, 'Sting', 15, 'Nước tăng lực Sting là một sản phẩm của Pepsico được các bạn trẻ rất yêu thích. Sting dâu tây đỏ là sự kết hợp đột phá giữa nước tăng lực và hương dâu tây tự nhiên cho mùi thơm dịu ngọt, hương dâu đậm đà cùng vị gas nhẹ mang lại cảm giác sảng khoái và thú vị cho người uống.', 15000, NULL, 'sting.jpg', 'phần', 'cũ', '2019-05-18 17:57:24', '2019-05-18 17:57:24'),
+(114, 'Cheese Cake', 13, 'Bánh Cheesecake là một loại bánh phô mai rất nổi tiếng tại nhiều quốc gia trên thế giới. Hòa theo sự phát triển của bánh kết hợp văn hóa mỗi nước mà Cheesecake có nhiều biến tấu khác nhau. Một số quốc gia có Cheesecake rất ngon có thể kể tên như Hy Lạp, Ý, Anh, Đức, Pháp, Bỉ, Mỹ và Nhật Bản. Vị béo của bánh kết hợp độ mềm mịn đã giúp cho loại bánh này có mặt trong rất nhiều tiệm bánh lớn nhỏ. Tại Việt Nam, Cheesecake cũng là một trong những loại bánh được rất nhiều người, đặc biệt là giới trẻ yêu thích', 30000, 25000, 'CheeseCake.jpg', 'cái', 'mới', '2019-05-30 13:49:45', '2019-05-30 13:49:45'),
+(115, 'Panettone Cake', 13, 'Panettone được làm từ bột mì nguyên cám cùng nho khô, vỏ cam, được ngâm với hỗn hợp rượu từ Pháp, điểm xuyết với thảo mộc và các loại quả phương Đông. Hỗn hợp trái cây này được chuẩn bị trước 2 ngày để có thể thấm thật đều mùi hương nồng ấm.', 20000, 15000, 'panettonecake.jpg', 'cái', 'cũ', '2019-05-30 13:52:34', '2019-05-30 13:52:34'),
+(116, 'Trà sữa truyền thống', 14, 'Trà sữa truyền thống cực kỳ phổ biến trên thị trường thức uống giải khát. Nó phù hợp với khẩu vị của nhiều đối tượng: học sinh, trẻ em, người lớn, người già… Điểm cộng lớn nhất cho thức uống này là vị đắng, chan chát và ngọt hậu hòa quyện với hương thơm ngậy mà không béo của sữa. Nhâm nhi từng ngụm nước độc đáo này, ta như được bay bổng vào thế giới của thiên nhiên, quên đi mệt mỏi, cái nắng hè oi ả bên ngoài.', 20000, 15000, 'TStruyenthong.jpg', 'ly', 'cũ', '2019-05-30 14:13:12', '2019-05-30 14:13:12'),
+(117, 'Trà sữa trân châu', 14, 'Trà sữa trân châu đang là món ăn ngon hot trend trên thị trường, vị béo ngậy của sữa tươi thanh trùng, vị dai dai ngọt ngọt của trân châu đường nâu - loại topping gây sốt sẽ khiến bạn uống mãi không dừng.', 30000, 25000, 'tsTranChau.jpg', 'ly', 'mới', '2019-05-30 14:14:44', '2019-05-30 14:14:44'),
+(118, 'CocaCola', 15, 'Nước ngọt Coca Cola giúp bạn xua tan mọi cảm giác mệt mỏi, căng thẳng, đem lại cảm giác thoải mái sau mỗi lần sử dụng.', 15000, NULL, 'Cocacola.jpg', 'phần', 'cũ', '2019-05-30 14:17:21', '2019-05-30 14:17:21');
 
 -- --------------------------------------------------------
 
@@ -163,6 +188,13 @@ CREATE TABLE `support` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `support`
+--
+
+INSERT INTO `support` (`id`, `full_name`, `email`, `title`, `content`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Văn Công A', 'aaa@gmail.com', 'Ship hàng', 'Cửa hàng có ship hàng không?', 'Chưa phản hồi', '2019-05-30 15:03:49', '2019-05-30 15:03:49');
 
 -- --------------------------------------------------------
 
@@ -212,13 +244,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `full_name`, `email`, `isAdmin`, `password`, `phone`, `address`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'Nguyễn Anh Tuấn', 'ntuan.2502@gmail.com', 'Không', '$2y$10$Q7RQNwCLOD0y2TrxmFIP6eHbK96Stuk2swNo9P.RWJpKPd8Y.tKIi', '0868608700', '245A/28 Ba Đình, Phường 8, Quận 8, Thành phố Hồ Chí Minh', 'GrZWwgdEQ9oc7bPuSZerELi4oZswddfdIkwgZt0vKE8eNwsqvt5jKwklsPmc', '2017-03-23 07:17:33', '2018-11-19 11:36:18'),
-(3, 'admin', 'admin', 'Có', '$2y$10$Q7RQNwCLOD0y2TrxmFIP6eHbK96Stuk2swNo9P.RWJpKPd8Y.tKIi', NULL, NULL, 'wSUqqlH12C5LtvVuBvwRdDHCwAOYqX9jaWGk5BYFglbvDWEmReuQcI1ztmBY', '2018-11-17 18:21:18', '2018-11-17 18:21:18'),
-(4, 'Nguyễn Bim', 'bimcho@gmail.com', 'Không', '$2y$10$iGc.1Ey2IJnGj4Qp4Mgpee4jbh91vWgN8cEz3IuXWC/7ivc/M3bYm', '19001009', 'Ở chung với ba mẹ', NULL, '2018-11-17 18:21:49', '2018-11-19 11:36:40'),
-(6, 'hoang nhat', 'nhat@gmail.com', 'Không', '$2y$10$bl2lDu4FmOWDH2GakE/3puAf6mqzuE0S5MJn/oSZB7YSy90zVgbPO', '1231312312', '123 nguyen van cu', 'HtqnlP97K0iuLhnScyolVRDly1N2zkDmbGpic2Rm70OpuHCOFKGeaCZiUngJ', '2018-11-26 15:56:26', '2018-11-26 15:56:26'),
-(7, 'Nhat', 'vonhathoang10@gmail.com', 'Không', '$2y$10$2/YCBJBITeuU30c/86SSFOs8EJi8uA8Qq72yjjxybqbSyhXp.6lb2', '01912281', '12323', NULL, '2018-12-24 09:26:06', '2018-12-24 09:26:06'),
-(9, 'nhat', 'vannhat8198@gmail.com', 'Không', '$2y$10$pJiNvY6/MprLoIUREzXXuu45y0efg3MbKPEDLgXAFXrUH4G6iY0Sa', '0976827921', 'hue', NULL, '2019-05-17 08:32:48', '2019-05-17 08:32:48'),
-(15, 'NguyenVanNhat', '12345@gmail.com', 'Có', '$2y$10$y8s/9d7aGkSh7bMKFJJiDeecj9XNn6vbCWU.6BCY5F9wIbXWF7Owq', '0976827921', 'Hồ Chí Minh', NULL, '2019-05-18 11:30:58', '2019-05-18 11:30:58');
+(16, 'Admin', 'admin@gmail.com', 'Có', '$2y$10$OOjs5wA1qTTZZJkdOcgJuuoltSN.w94iWx/lYHv4TLX9cLIeb1RkC', '0986765362', 'Hồ Chí Minh', 'NhUv7DASPmY6tqNYoN8F0gigmBBazep7IN3tf7G2tzLTZ7tN8nOh0zat1x36', '2019-05-30 13:40:22', '2019-05-30 13:40:22'),
+(17, 'Nguyễn Văn Nhật', 'vannhat8198@gmail.com', 'Có', '$2y$10$oCzupbRr667KUKqNfHn5F.WpoZMEAtwS0zwJNUhyB9JG3351WiwhS', '0987654321', 'Hồ', NULL, '2019-05-30 13:42:32', '2019-05-30 13:42:32'),
+(18, 'Võ Hoàng Nhật', '1612462@gmail.com', 'Có', '$2y$10$bYxbwURb1VkBLvX8gf4Y.uQohtOXIbinRykD92049DT1A/geUqDNW', '0978654521', 'Hồ Chí Minh', NULL, '2019-05-30 13:43:09', '2019-05-30 13:43:09'),
+(19, 'Nhật Nguyễn', 'nhat123@gmail.com', 'Không', '$2y$10$SJ5tS6R0IFPbz5jB5O84S.9GWOoT6TWOyK1N5eG7loHK7aSCzOBoK', '0123456789', 'Q12 TP. Hồ Chí Minh', NULL, '2019-05-30 14:58:47', '2019-05-30 14:58:47');
 
 --
 -- Indexes for dumped tables
@@ -284,25 +313,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bills`
 --
 ALTER TABLE `bills`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `bill_detail`
 --
 ALTER TABLE `bill_detail`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT for table `slide`
@@ -314,7 +343,7 @@ ALTER TABLE `slide`
 -- AUTO_INCREMENT for table `support`
 --
 ALTER TABLE `support`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `type_products`
@@ -326,7 +355,7 @@ ALTER TABLE `type_products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables

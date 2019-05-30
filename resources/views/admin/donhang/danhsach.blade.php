@@ -34,18 +34,6 @@
                         <th class="center" width="50px">Đơn giá 1 sản phẩm</th>
                         <th class="center" width="40px">Thời gian đặt</th>
                         <th class="center" width="60px">Xuất đơn hàng</th>
-
-                        <!-- <th class="center" width="50px">ID</th>
-                        <th class="center" width="150px">Name</th>
-                        <th class="center" width="150px">Gender</th>
-                        <th class="center" width="0px">Email</th>
-                        <th class="center" width="500px">Address</th>
-                        <th class="center" width="100px">Phone</th>
-                        <th class="center" width="100px">Note</th>
-                        <th class="center" width="150px">Created</th>
-                        <th class="center" width="150px">Updated</th> -->
-                        <!-- <th class="center" width="50px">Xoá</th> -->
-                        <!-- <th class="center" width="50px">Sửa</th> -->
                     </tr>
                     </thead>
                     <tbody>
@@ -80,25 +68,6 @@
                         </tr>
                         @endif
                         @endforeach
-
-
-                    <!-- @foreach($customer as $us)
-                        <tr class="odd gradeX">
-                            <td class="center">{{$us->id}}</td>
-                            <td>{{$us->name}}</td>
-                            <td>{{$us->gender}}</td>
-                            <td>{{$us->email}}</td>
-                            <td>{{$us->address}}</td>
-                            <td>{{$us->phone_number}}</td>
-                            <td>{{$us->note}}</td>
-                            <td class="center">{{$us->created_at}}</td>
-                            <td class="center">{{$us->updated_at}}</td>
-                            <!-- <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a -->
-                                        <!-- href={{route('admin-xoauser',$us->id)}}>Xoá</a></td> -->
-                            <!-- <td class="center"><i class="fa fa-pencil fa-fw"></i> <a -->
-                                        <!-- href={{route('admin-suauser',$us->id)}}>Sửa</a></td> -->
-                        <!-- </tr> -->
-                    <!-- @endforeach -->
                 </table>
             </div>
             <!-- /.row -->

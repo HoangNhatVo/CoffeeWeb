@@ -133,8 +133,6 @@
 
 
                         <div class="text-center">
-                            <!-- <button type="submit" class="beta-btn primary" href="#" style="background-color: #881a1a;border-radius: 2px">Đặt hàng <i class="fa fa-chevron-right"></i> -->
-                            <!-- </button>        -->
                             <button id="btn_stylenew" type="submit" class="btn btn-primary" href="#">Đặt hàng <i id="exp" class="fa fa-chevron-right"></i>
                             </button>                        
                             </div>
